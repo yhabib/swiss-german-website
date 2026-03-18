@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 const nunito = Nunito({
@@ -22,6 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${nunito.variable} antialiased font-sans`}>
         {children}
+        <Analytics />
       </body>
     </html>
   );
