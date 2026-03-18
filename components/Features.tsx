@@ -7,9 +7,9 @@ export default function Features() {
         <h2 className="text-3xl font-black mb-2 text-gray-900">Features</h2>
       </div>
 
-      <div className="container mx-auto max-w-5xl">
+      <div className="container mx-auto max-w-5xl bg-white border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-[2.5rem] p-8 md:p-12 -mt-10 relative z-10">
         {/* Horizontal Nav Bar Style Box */}
-        <div className="flex flex-col md:flex-row bg-gray-50 border border-gray-100 rounded-3xl p-2 mb-10 shadow-sm relative overflow-hidden">
+        <div className="flex flex-col md:flex-row border-2 border-gray-100 rounded-3xl p-2 mb-12 relative overflow-hidden bg-white shadow-sm">
           
           {/* Active Tab Background (Simulated) */}
           <div className="hidden md:block absolute left-2 top-2 bottom-2 w-[32%] bg-primary rounded-2xl shadow-[0_4px_0_#D32F2F]"></div>
