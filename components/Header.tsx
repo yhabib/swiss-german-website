@@ -14,16 +14,16 @@ export default function Header() {
                 <div className="absolute w-0.5 h-1.5 bg-primary"></div>
             </div>
           </div>
-          <span className="font-extrabold text-xl tracking-tight text-gray-900">Grüezi<span className="text-primary">!</span></span>
+          <span className="font-extrabold text-xl tracking-tight text-gray-900">Grüezi Deutsch</span>
         </Link>
-        <nav className="hidden md:flex gap-8 font-bold text-gray-600">
+        <nav className="hidden md:flex gap-8 font-bold text-gray-900 text-sm">
           <Link href="#features" className="hover:text-primary transition-colors">Features</Link>
-          <Link href="#how-it-works" className="hover:text-primary transition-colors">How it works</Link>
           <Link href="#pricing" className="hover:text-primary transition-colors">Pricing</Link>
+          <Link href="#about" className="hover:text-primary transition-colors">About</Link>
         </nav>
         <div className="flex gap-4">
           <Link href="#download" className="playful-button text-sm px-6 py-2">
-            Get the App
+            Sign Up
           </Link>
         </div>
       </div>

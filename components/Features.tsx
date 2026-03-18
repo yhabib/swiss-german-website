@@ -1,55 +1,59 @@
-import { BookOpen, Compass, BarChart2 } from "./Icons";
-
-const features = [
-  {
-    icon: Compass,
-    title: "Explore the Dialects",
-    description: "Switzerland is diverse. Our lessons guide you through the cultural nuances and vocabulary of different regions.",
-    color: "bg-blue-100",
-    iconColor: "text-accent-blue",
-    borderColor: "border-blue-200"
-  },
-  {
-    icon: BookOpen,
-    title: "Daily Phrasebook",
-    description: "Access over 500+ essential daily expressions for travel, dining, and making connections instantly.",
-    color: "bg-red-100",
-    iconColor: "text-primary",
-    borderColor: "border-red-200"
-  },
-  {
-    icon: BarChart2,
-    title: "Track Your Stats",
-    description: "Monitor your daily streaks, level up your profile, and celebrate major learning milestones.",
-    color: "bg-green-100",
-    iconColor: "text-accent-green",
-    borderColor: "border-green-200"
-  }
-];
+import { BookOpen, BarChart2, Compass } from "./Icons";
 
 export default function Features() {
   return (
-    <section id="features" className="py-24 bg-white px-4 sm:px-6 flex justify-center border-t-2 border-gray-100 rounded-t-[3rem] -mt-8 relative z-20">
-      <div className="container mx-auto max-w-6xl">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-4xl font-black mb-4">Everything You Need to Succeed</h2>
-          <p className="text-lg text-gray-600 font-medium">
-            Designed to make language learning sticky, fun, and highly effective for everyday Swiss life.
-          </p>
+    <section id="features" className="py-20 bg-white px-4 flex flex-col items-center">
+      <div className="text-center mb-10">
+        <h2 className="text-3xl font-black mb-2 text-gray-900">Features</h2>
+      </div>
+
+      <div className="container mx-auto max-w-5xl">
+        {/* Horizontal Nav Bar Style Box */}
+        <div className="flex flex-col md:flex-row bg-gray-50 border border-gray-100 rounded-3xl p-2 mb-10 shadow-sm relative overflow-hidden">
+          
+          {/* Active Tab Background (Simulated) */}
+          <div className="hidden md:block absolute left-2 top-2 bottom-2 w-[32%] bg-primary rounded-2xl shadow-[0_4px_0_#D32F2F]"></div>
+
+          <div className="flex-1 flex items-center justify-center py-4 px-6 md:text-white font-bold gap-3 relative z-10 md:bg-transparent bg-primary rounded-2xl mb-2 md:mb-0 shadow-[0_4px_0_#D32F2F] md:shadow-none">
+            <BookOpen className="w-6 h-6" />
+            <span className="text-lg">Phrasebook</span>
+          </div>
+
+          <div className="flex-1 flex items-center justify-center py-4 px-6 text-gray-600 font-bold gap-3 hover:text-gray-900 transition-colors">
+            <BarChart2 className="w-6 h-6 text-blue-500" />
+            <span className="text-lg">Stats</span>
+          </div>
+
+          <div className="flex-1 flex items-center justify-center py-4 px-6 text-gray-600 font-bold gap-3 hover:text-gray-900 transition-colors">
+            <Compass className="w-6 h-6 text-[#1E3A8A]" />
+            <span className="text-lg">Explore</span>
+          </div>
         </div>
-        
-        <div className="grid md:grid-cols-3 gap-8">
-          {features.map((feature, idx) => (
-            <div key={idx} className="bg-white border-2 border-gray-100 rounded-3xl p-8 hover:border-gray-300 transition-colors shadow-sm hover:shadow-md flex flex-col items-start group">
-              <div className={`w-14 h-14 rounded-2xl ${feature.color} border-2 ${feature.borderColor} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-                <feature.icon className={`w-7 h-7 ${feature.iconColor}`} strokeWidth={2.5} />
-              </div>
-              <h3 className="text-2xl font-bold mb-3">{feature.title}</h3>
-              <p className="text-gray-600 font-medium leading-relaxed">
-                {feature.description}
-              </p>
-            </div>
-          ))}
+
+        {/* Features Content Columns */}
+        <div className="grid md:grid-cols-3 gap-8 px-4 justify-items-center md:justify-items-start">
+          
+          <div className="text-center md:text-left text-sm md:text-base">
+            <h3 className="font-bold text-gray-900 mb-2">Practical Phrases: Access 500+ daily expressions for travel, dining, and connections.</h3>
+            <p className="text-gray-600">
+              Learn essential phrases with accurate Swiss German translations and context.
+            </p>
+          </div>
+
+          <div className="text-center md:text-left text-sm md:text-base">
+            <h3 className="font-bold text-gray-900 mb-2">Track Your Progress:</h3>
+            <p className="text-gray-600">
+              Monitor your daily streaks, level up, and celebrate milestones.
+            </p>
+          </div>
+
+          <div className="text-center md:text-left text-sm md:text-base">
+            <h3 className="font-bold text-gray-900 mb-2">Discover Local Culture:</h3>
+            <p className="text-gray-600">
+              Explore Swiss German dialects, vocabulary, and cultural insights across regions.
+            </p>
+          </div>
+
         </div>
       </div>
     </section>
