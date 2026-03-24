@@ -18,12 +18,11 @@ export default function Header() {
         </Link>
         <nav className="hidden md:flex gap-8 font-black text-gray-500 text-sm tracking-wide uppercase">
           <Link href="#features" className="hover:text-[#EE3E38] transition-colors">Features</Link>
-          <Link href="#pricing" className="hover:text-[#EE3E38] transition-colors">Pricing</Link>
           <Link href="#about" className="hover:text-[#EE3E38] transition-colors">About</Link>
         </nav>
         <div className="flex gap-4">
           <Link href="#download" className="playful-button text-sm px-6 py-2.5 shadow-[0_4px_0_#C62828] border-2 border-[transparent] hover:border-[#EE3E38]">
-            Sign Up
+            Get App
           </Link>
         </div>
       </div>
