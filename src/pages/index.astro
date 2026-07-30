@@ -5,7 +5,7 @@ import SiteFooter from "../components/SiteFooter.astro";
 
 const appStoreURL = import.meta.env.PUBLIC_APP_STORE_URL;
 
-const situations = [
+const coreSituations = [
   {
     title: "Schwiizerdütsch Basics",
     description: "Sound shifts, particles, and the phrases that keep a conversation moving.",
@@ -15,6 +15,11 @@ const situations = [
     title: "Cafi & Beiz",
     description: "Order naturally, react quickly, and sound local-friendly.",
     meta: "6 lessons",
+  },
+  {
+    title: "Smalltalk & Freiziit",
+    description: "Join a conversation, talk about your day, and make plans naturally.",
+    meta: "2 lessons",
   },
   {
     title: "Feuerwehr & Iisatz",
@@ -38,8 +43,8 @@ const situations = [
   },
   {
     title: "Tram, Bus & Zug",
-    description: "Handle ZVV and SBB conversations without switching to High German.",
-    meta: "4 lessons",
+    description: "Handle everyday public transport conversations without switching to High German.",
+    meta: "1 lesson",
   },
   {
     title: "Büro & schaffe",
@@ -56,19 +61,42 @@ const situations = [
     description: "Practice the interactions that make up a normal week.",
     meta: "3 lessons",
   },
+  {
+    title: "Gsundheit & Praxis",
+    description: "Make appointments, describe symptoms, and react in urgent situations.",
+    meta: "2 lessons",
+  },
+  {
+    title: "Amt, Bank & Versicherig",
+    description: "Handle essential conversations with public offices, banks, and insurers.",
+    meta: "2 lessons",
+  },
+];
+
+const zurichSituations = [
+  {
+    title: "So tönts z Züri",
+    description: "Notice Zürich sound forms, verb endings, and small everyday words.",
+    meta: "2 lessons",
+  },
+  {
+    title: "Underwägs z Züri",
+    description: "Use Zürich-specific stops, zones, and transport situations.",
+    meta: "3 lessons",
+  },
 ];
 
 const schema = {
   "@context": "https://schema.org",
   "@type": "MobileApplication",
   name: "Swiss German",
-  description: "Learn Zürich Swiss German through short lessons built around real-life situations.",
+  description: "Learn a shared Swiss German foundation, then understand what sounds different in Zürich.",
   applicationCategory: "EducationalApplication",
   operatingSystem: "iOS 17 or later",
   inLanguage: ["en", "de-CH", "gsw"],
   featureList: [
-    "296 Zürich German phrase pairs",
-    "34 lessons across 10 real-life situations",
+    "368 Swiss German phrase pairs",
+    "42 lessons across a shared core and Zürich profile",
     "On-device phrase audio",
     "Offline course access",
     "Personal phrasebook and progress tracking",
@@ -83,19 +111,19 @@ const schema = {
 ---
 
 <BaseLayout
-  title="Swiss German for real life in Zürich"
-  description="Learn the Zürich German you actually hear—in cafés, trams, offices, shops, and conversations with your neighbours."
+  title="Swiss German for real life — shared core and Zürich profile"
+  description="Start with a practical Swiss German foundation, then learn the words and sounds that make Zürich distinct."
 >
   <SiteHeader />
 
   <main>
     <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow reveal reveal-1">Course 01 · Zürich</p>
-        <h1 class="reveal reveal-2">You know German.<br /><span>Now understand Zürich.</span></h1>
+        <p class="eyebrow reveal reveal-1">Shared core · Zürich profile</p>
+        <h1 class="reveal reveal-2">Learn what’s shared.<br /><span>Then what’s Zürich.</span></h1>
         <p class="hero-intro reveal reveal-3">
-          Swiss German for the moments that happen every day—in cafés, trams,
-          offices, shops, and conversations with your neighbours.
+          Start with Swiss German that travels across regions. Then learn the
+          sounds, words, and situations that make Zürich sound like Zürich.
         </p>
 
         <div class="hero-actions reveal reveal-4">
@@ -124,7 +152,7 @@ const schema = {
         <div class="phone">
           <div class="phone-top"><span>9:41</span><i></i></div>
           <div class="phone-screen">
-            <div class="phone-kicker">Course 01 · Zürich</div>
+            <div class="phone-kicker">Shared core · Zürich profile</div>
             <div class="phone-heading">Grüezi.</div>
             <p>Swiss German for real life.</p>
             <div class="phone-ticket">
@@ -149,70 +177,106 @@ const schema = {
     </section>
 
     <section class="proof-strip" aria-label="Course facts">
-      <div><strong>296</strong><span>phrase pairs</span></div>
-      <div><strong>34</strong><span>short lessons</span></div>
-      <div><strong>10</strong><span>real-life situations</span></div>
+      <div><strong>368</strong><span>phrase pairs</span></div>
+      <div><strong>42</strong><span>short lessons</span></div>
+      <div><strong>15</strong><span>real-life situations</span></div>
       <div><strong>100%</strong><span>available offline</span></div>
     </section>
 
     <section class="phrase-section section-shell" id="how-it-works">
       <div class="section-heading">
         <p class="eyebrow">See the difference</p>
-        <h2>One phrase can change<br />the whole interaction.</h2>
+        <h2>One language family.<br />Differences you can see.</h2>
       </div>
 
       <div class="phrase-stage">
-        <div class="phrase-switch" aria-label="From High German to Zürich German">
+        <div class="phrase-switch" aria-label="From High German through shared Swiss German to Zürich German">
           <div class="phrase-switch-card">
             <small>High German</small>
-            <strong>Guten Tag.</strong>
+            <strong>fünf Minuten</strong>
+          </div>
+          <div class="phrase-switch-arrow" aria-hidden="true">↓</div>
+          <div class="phrase-switch-card phrase-switch-card-core">
+            <small>Shared core</small>
+            <strong>füüf Minute</strong>
           </div>
           <div class="phrase-switch-arrow" aria-hidden="true">↓</div>
           <div class="phrase-switch-card phrase-switch-card-local">
             <small>Zürich German</small>
-            <strong>Grüezi.</strong>
+            <strong>föif Minute</strong>
           </div>
         </div>
 
         <div class="phrase-copy">
-          <span class="phrase-number">01 / 296</span>
-          <p class="swiss-phrase">Grüezi, i hätt<br />e churzi Frag.</p>
-          <p class="german-phrase">Guten Tag, ich hätte eine kurze Frage.</p>
-          <p class="phrase-note">Guten Tag → Grüezi</p>
+          <span class="phrase-number">01 / 368</span>
+          <p class="swiss-phrase">Das duurt nume<br />föif minute.</p>
+          <p class="german-phrase">Das dauert nur fünf Minuten.</p>
+          <p class="phrase-note">fünf → füüf → föif</p>
         </div>
 
         <div class="phrase-shifts" aria-label="Phrase changes">
-          <span><small>Guten Tag</small><b>Grüezi</b></span>
-          <span><small>ich hätte</small><b>i hätt</b></span>
-          <span><small>eine kurze</small><b>e churzi</b></span>
+          <span><small>High German</small><b>fünf</b></span>
+          <span><small>Shared core</small><b>füüf</b></span>
+          <span><small>Zürich</small><b>föif</b></span>
         </div>
       </div>
     </section>
 
     <section class="route-section" id="route">
       <div class="route-intro section-shell">
-        <p class="eyebrow">The complete course</p>
-        <h2>Your route through Zürich.</h2>
+        <p class="eyebrow">One foundation, clear profiles</p>
+        <h2>Swiss German first.<br />Regional detail second.</h2>
         <p>
-          Start with the sounds. Continue through the situations where
-          confidence matters. Every stop unlocks practical language you can use
-          the same day.
+          Build a consistent foundation for everyday conversations, then compare
+          the forms you will hear in Zürich. The app keeps both layers visible
+          instead of pretending there is one neutral Swiss German.
         </p>
       </div>
 
-      <div class="route-list section-shell">
-        {situations.map((situation, index) => (
-          <article class="route-stop">
-            <div class="stop-marker">
-              <span>{String(index + 1).padStart(2, "0")}</span>
-            </div>
-            <div class="stop-copy">
-              <p>{situation.meta}</p>
-              <h3>{situation.title}</h3>
-              <span>{situation.description}</span>
-            </div>
-          </article>
-        ))}
+      <div class="route-groups section-shell">
+        <section class="route-group" aria-labelledby="core-route-title">
+          <div class="route-group-heading">
+            <p>01 · Shared foundation</p>
+            <h3 id="core-route-title">The patterns that travel.</h3>
+            <span>13 situations · 37 lessons · 324 phrase pairs</span>
+          </div>
+          <div class="route-list">
+            {coreSituations.map((situation, index) => (
+              <article class="route-stop">
+                <div class="stop-marker">
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                </div>
+                <div class="stop-copy">
+                  <p>{situation.meta}</p>
+                  <h3>{situation.title}</h3>
+                  <span>{situation.description}</span>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section class="route-group route-group-regional" aria-labelledby="zurich-route-title">
+          <div class="route-group-heading">
+            <p>02 · Regional profile</p>
+            <h3 id="zurich-route-title">What makes Zürich Zürich.</h3>
+            <span>2 situations · 5 lessons · 44 phrase pairs</span>
+          </div>
+          <div class="route-list">
+            {zurichSituations.map((situation, index) => (
+              <article class="route-stop">
+                <div class="stop-marker">
+                  <span>ZH{index + 1}</span>
+                </div>
+                <div class="stop-copy">
+                  <p>{situation.meta}</p>
+                  <h3>{situation.title}</h3>
+                  <span>{situation.description}</span>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
       </div>
     </section>
 
@@ -240,7 +304,7 @@ const schema = {
         <article class="feature-card feature-card-blue">
           <div class="feature-copy">
             <span>02 · Collect</span>
-            <h3>Your own Zürich phrasebook.</h3>
+            <h3>Your own Swiss German phrasebook.</h3>
             <p>Every phrase you meet is saved with pronunciation, context, and the High German equivalent.</p>
           </div>
           <div class="phrasebook-preview">
@@ -278,7 +342,8 @@ const schema = {
       <div class="principles-grid">
         <h2>Not textbook German<br />with a Swiss flag on it.</h2>
         <div>
-          <p><b>One dialect, clearly named.</b> The course teaches Zürich German instead of blending regional varieties together.</p>
+          <p><b>A shared core, honestly framed.</b> Swiss German has no neutral standard. The foundation is a consistent learning variety built for broad everyday understanding.</p>
+          <p><b>Regional differences stay visible.</b> Zürich forms live in their own profile, so you can see what is shared and what is local.</p>
           <p><b>Designed for German speakers.</b> Familiar High German is used as the bridge—not as the destination.</p>
           <p><b>No account required.</b> The course, audio, phrasebook, and learning progress work directly on your iPhone.</p>
         </div>
@@ -287,7 +352,7 @@ const schema = {
 
     <section class="download-section" id="download">
       <div class="download-cross" aria-hidden="true"><i></i><b></b></div>
-      <p class="eyebrow">Course 01 · Zürich</p>
+      <p class="eyebrow">Shared core · Zürich profile</p>
       <h2>Ready when<br />the conversation starts.</h2>
       <p>Learn for five minutes. Use it on your next tram ride.</p>
       <a class="store-button store-button-light" href={appStoreURL || "#download"}>
@@ -309,11 +374,11 @@ const schema = {
       <div class="faq-list">
         <details open>
           <summary>Is Swiss German different from German?</summary>
-          <p>Yes. Swiss German covers a family of Alemannic dialects used in everyday speech. This course uses High German as a bridge into the Zürich dialect.</p>
+          <p>Yes. Swiss German covers a family of Alemannic dialects used in everyday speech. The app uses High German as a bridge into a shared learning variety and then shows regional Zürich forms separately.</p>
         </details>
         <details>
-          <summary>Which dialect does the app teach?</summary>
-          <p>Zürich German. The course names the region clearly so you know which pronunciation, vocabulary, and expressions you are learning.</p>
+          <summary>Which Swiss German does the app teach?</summary>
+          <p>The app starts with a consistent, interregional learning variety—not a claimed neutral dialect. A separate Zürich profile then teaches the pronunciation, vocabulary, and expressions that are specific to the region.</p>
         </details>
         <details>
           <summary>Do I need to speak German already?</summary>
