@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Swiss German route and voice app icon</title>
+  <desc id="desc">A red learning route meets a blue transport route at a voice station.</desc>
+  <rect width="1024" height="1024" fill="#F5F3EE"/>
+
+  <g fill="#0067A5">
+    <rect x="355" y="-40" width="70" height="275" rx="35"/>
+    <rect x="370" y="187" width="390" height="70" rx="35" transform="rotate(41 370 187)"/>
+    <rect x="615" y="420" width="70" height="330" rx="35"/>
+    <rect x="615" y="680" width="350" height="70" rx="35"/>
+  </g>
+
+  <polygon points="-75,1054 -25,1106 675,442 625,390" fill="#E32219"/>
+
+  <g fill="#F5F3EE" stroke="#E32219" stroke-width="34">
+    <circle cx="250" cy="804" r="50"/>
+    <circle cx="432" cy="642" r="50"/>
+  </g>
+
+  <circle cx="650" cy="420" r="206" fill="#E32219"/>
+  <g fill="#F5F3EE">
+    <rect x="562" y="373" width="42" height="94" rx="21"/>
+    <rect x="629" y="327" width="42" height="186" rx="21"/>
+    <rect x="696" y="355" width="42" height="130" rx="21"/>
+  </g>
+</svg>

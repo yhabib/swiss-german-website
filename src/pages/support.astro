@@ -1,0 +1,57 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+
+const supportURL =
+  import.meta.env.PUBLIC_SUPPORT_URL ||
+  "https://github.com/yhabib/swiss-german-ios/issues/new";
+---
+
+<BaseLayout
+  title="Support · Swiss German"
+  description="Get help with the Swiss German iOS app."
+>
+  <SiteHeader />
+  <main class="support-page section-shell">
+    <section class="support-hero">
+      <div>
+        <p class="eyebrow">We’re here to help</p>
+        <h1>Was chönd<br />mir für dich tue?</h1>
+        <p>Tell us what happened, which iPhone and iOS version you use, and what you expected to see.</p>
+      </div>
+      <div class="support-ticket">
+        <span>Support route</span>
+        <strong>Usually one message is enough.</strong>
+        <ol>
+          <li><i>01</i> Describe the problem</li>
+          <li><i>02</i> Add your iOS version</li>
+          <li><i>03</i> Include a screenshot if useful</li>
+        </ol>
+        <a href={supportURL}>Open a support request →</a>
+      </div>
+    </section>
+
+    <section class="support-faq">
+      <h2>Quick answers</h2>
+      <div>
+        <article>
+          <span>01</span>
+          <h3>Restore Premium</h3>
+          <p>Open Settings in the app, choose Premium access, then select Restore purchase. Use the same Apple Account that made the original purchase.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>No phrase audio</h3>
+          <p>Make sure your device volume is audible. iOS chooses the best available de-CH voice automatically and falls back to de-DE when needed.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Progress and privacy</h3>
+          <p>Your progress is stored locally on your iPhone. Removing the app can also remove that local learning history.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+  <SiteFooter />
+</BaseLayout>

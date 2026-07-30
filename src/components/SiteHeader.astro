@@ -1,0 +1,22 @@
+---
+import AppIcon from "./AppIcon.astro";
+
+const appStoreURL = import.meta.env.PUBLIC_APP_STORE_URL;
+---
+
+<header class="site-header">
+  <a class="brand" href="/" aria-label="Swiss German home">
+    <AppIcon size={42} eager />
+    <span>Swiss German</span>
+  </a>
+
+  <nav class="desktop-nav" aria-label="Primary navigation">
+    <a href="/#how-it-works">How it works</a>
+    <a href="/#route">Situations</a>
+    <a href="/support">Support</a>
+  </nav>
+
+  <a class:list={["header-cta", { "is-coming": !appStoreURL }]} href={appStoreURL || "/#download"}>
+    {appStoreURL ? "Get the app" : "App Store soon"}
+  </a>
+</header>

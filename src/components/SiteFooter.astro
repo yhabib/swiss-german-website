@@ -1,0 +1,23 @@
+---
+import AppIcon from "./AppIcon.astro";
+
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="footer-brand">
+    <AppIcon size={44} />
+    <div>
+      <strong>Swiss German</strong>
+      <span>Made for real life in Zürich.</span>
+    </div>
+  </div>
+
+  <div class="footer-links">
+    <a href="/privacy">Privacy</a>
+    <a href="/support">Support</a>
+    <a href="https://github.com/yhabib/swiss-german-ios">GitHub</a>
+  </div>
+
+  <p>© {year} Swiss German</p>
+</footer>

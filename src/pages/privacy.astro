@@ -1,0 +1,63 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+
+const supportURL =
+  import.meta.env.PUBLIC_SUPPORT_URL ||
+  "https://github.com/yhabib/swiss-german-ios/issues/new";
+---
+
+<BaseLayout
+  title="Privacy · Swiss German"
+  description="How the Swiss German app and website handle your information."
+>
+  <SiteHeader />
+  <main class="legal-page section-shell">
+    <header class="legal-header">
+      <p class="eyebrow">Plain-language policy</p>
+      <h1>Privacy.</h1>
+      <p>Swiss German is designed to work without an account and to keep your learning history on your device.</p>
+      <span>Last updated: 30 July 2026</span>
+    </header>
+
+    <div class="legal-grid">
+      <aside>
+        <a href="#app">The iOS app</a>
+        <a href="#website">This website</a>
+        <a href="#purchases">Purchases</a>
+        <a href="#contact">Contact</a>
+      </aside>
+
+      <article class="legal-content">
+        <section id="app">
+          <span>01</span>
+          <h2>The iOS app</h2>
+          <p>The app does not require an account. Course progress, saved phrases, appearance settings, and practice preferences are stored locally on your device.</p>
+          <p>Phrase playback uses speech voices available through iOS. The course content is included with the app and does not require a network connection.</p>
+        </section>
+
+        <section id="website">
+          <span>02</span>
+          <h2>This website</h2>
+          <p>The website uses Cloudflare Pages for hosting and may use Cloudflare Web Analytics to understand aggregate visits and page performance.</p>
+          <p>Cloudflare Web Analytics is configured without advertising cookies. It reports aggregate information such as visits, pages viewed, approximate country, device category, and page-load performance. It is not used to build advertising profiles.</p>
+        </section>
+
+        <section id="purchases">
+          <span>03</span>
+          <h2>Purchases</h2>
+          <p>Premium access is purchased through Apple’s App Store using StoreKit. Apple processes the transaction. The app reads the verified purchase status needed to provide Premium access.</p>
+        </section>
+
+        <section id="contact">
+          <span>04</span>
+          <h2>Questions or requests</h2>
+          <p>If you have a privacy question or believe something here is inaccurate, please contact the project through the support channel.</p>
+          <a class="legal-action" href={supportURL}>Contact support →</a>
+        </section>
+      </article>
+    </div>
+  </main>
+  <SiteFooter />
+</BaseLayout>
