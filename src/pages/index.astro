@@ -1,0 +1,355 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+
+const appStoreURL = import.meta.env.PUBLIC_APP_STORE_URL;
+
+const situations = [
+  {
+    title: "Schwiizerdütsch Basics",
+    description: "Sound shifts, particles, and the phrases that keep a conversation moving.",
+    meta: "4 lessons",
+  },
+  {
+    title: "Cafi & Beiz",
+    description: "Order naturally, react quickly, and sound local-friendly.",
+    meta: "6 lessons",
+  },
+  {
+    title: "Feuerwehr & Iisatz",
+    description: "Short calls and practical language used around volunteer fire work.",
+    meta: "3 lessons",
+  },
+  {
+    title: "Familie & Chind",
+    description: "Everyday language for baby routines, gear, and family life.",
+    meta: "1 lesson",
+  },
+  {
+    title: "Wohnigssuechi & Zügle",
+    description: "Viewings, moving logistics, and speaking with property management.",
+    meta: "2 lessons",
+  },
+  {
+    title: "Wäg finde",
+    description: "Find your way through stations, buildings, and street directions.",
+    meta: "4 lessons",
+  },
+  {
+    title: "Tram, Bus & Zug",
+    description: "Handle ZVV and SBB conversations without switching to High German.",
+    meta: "4 lessons",
+  },
+  {
+    title: "Büro & schaffe",
+    description: "Move from passive understanding to active participation at work.",
+    meta: "4 lessons",
+  },
+  {
+    title: "WG & Nachbere",
+    description: "Organise flat life and speak politely with neighbours.",
+    meta: "3 lessons",
+  },
+  {
+    title: "Lade, Poscht & Apotheke",
+    description: "Practice the interactions that make up a normal week.",
+    meta: "3 lessons",
+  },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  name: "Swiss German",
+  description: "Learn Zürich Swiss German through short lessons built around real-life situations.",
+  applicationCategory: "EducationalApplication",
+  operatingSystem: "iOS 17 or later",
+  inLanguage: ["en", "de-CH", "gsw"],
+  featureList: [
+    "296 Zürich German phrase pairs",
+    "34 lessons across 10 real-life situations",
+    "On-device phrase audio",
+    "Offline course access",
+    "Personal phrasebook and progress tracking",
+  ],
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "CHF",
+  },
+  ...(appStoreURL ? { installUrl: appStoreURL } : {}),
+};
+---
+
+<BaseLayout
+  title="Swiss German for real life in Zürich"
+  description="Learn the Zürich German you actually hear—in cafés, trams, offices, shops, and conversations with your neighbours."
+>
+  <SiteHeader />
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow reveal reveal-1">Course 01 · Zürich</p>
+        <h1 class="reveal reveal-2">You know German.<br /><span>Now understand Zürich.</span></h1>
+        <p class="hero-intro reveal reveal-3">
+          Swiss German for the moments that happen every day—in cafés, trams,
+          offices, shops, and conversations with your neighbours.
+        </p>
+
+        <div class="hero-actions reveal reveal-4">
+          <a class="store-button" href={appStoreURL || "#download"}>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M17.05 12.54c-.02-2.46 2.01-3.65 2.1-3.71a4.51 4.51 0 0 0-3.55-1.92c-1.49-.16-2.94.9-3.7.9-.77 0-1.94-.88-3.2-.85a4.7 4.7 0 0 0-3.95 2.41c-1.72 2.98-.44 7.37 1.21 9.78.83 1.18 1.8 2.5 3.06 2.45 1.23-.05 1.69-.79 3.18-.79 1.47 0 1.9.79 3.18.76 1.33-.02 2.16-1.18 2.96-2.37a9.72 9.72 0 0 0 1.35-2.74 4.25 4.25 0 0 1-2.64-3.92ZM14.63 5.33A4.3 4.3 0 0 0 15.62 2a4.39 4.39 0 0 0-2.85 1.58 4.12 4.12 0 0 0-1.02 3.22 3.63 3.63 0 0 0 2.88-1.47Z"/>
+            </svg>
+            <span>
+              <small>{appStoreURL ? "Download on the" : "Coming soon to the"}</small>
+              App Store
+            </span>
+          </a>
+          <a class="text-link" href="#how-it-works">See how it works <span>↓</span></a>
+        </div>
+      </div>
+
+      <div class="hero-product reveal reveal-3" aria-label="Preview of the Swiss German app">
+        <div class="network-map" aria-hidden="true">
+          <span class="map-line map-line-red"></span>
+          <span class="map-line map-line-blue"></span>
+          <i class="map-stop stop-1"></i>
+          <i class="map-stop stop-2"></i>
+          <i class="map-stop stop-3"></i>
+        </div>
+
+        <div class="phone">
+          <div class="phone-top"><span>9:41</span><i></i></div>
+          <div class="phone-screen">
+            <div class="phone-kicker">Course 01 · Zürich</div>
+            <div class="phone-heading">Grüezi.</div>
+            <p>Swiss German for real life.</p>
+            <div class="phone-ticket">
+              <span>Your route</span>
+              <strong>Level 03</strong>
+              <div><i style="width: 62%"></i></div>
+              <small>620 XP · 3 DAY STREAK</small>
+            </div>
+            <div class="phone-section-label">
+              <b>02</b>
+              <span>Cafi & Beiz</span>
+              <small>42%</small>
+            </div>
+            <div class="phone-lessons">
+              <div class="done"><i>✓</i><span><b>Aacho & Platz finde</b><small>8 PHRASES</small></span></div>
+              <div class="next"><i>▶</i><span><b>Empfehlige & reagiere</b><small>NEXT · 8 PHRASES</small></span></div>
+              <div><i>3</i><span><b>A de Theke bstelle</b><small>9 PHRASES</small></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="proof-strip" aria-label="Course facts">
+      <div><strong>296</strong><span>phrase pairs</span></div>
+      <div><strong>34</strong><span>short lessons</span></div>
+      <div><strong>10</strong><span>real-life situations</span></div>
+      <div><strong>100%</strong><span>available offline</span></div>
+    </section>
+
+    <section class="phrase-section section-shell" id="how-it-works">
+      <div class="section-heading">
+        <p class="eyebrow">Hear the difference</p>
+        <h2>One phrase can change<br />the whole interaction.</h2>
+      </div>
+
+      <div class="phrase-stage">
+        <button
+          class="audio-orbit"
+          type="button"
+          data-speak="Grüezi, i hätt e churzi Frag."
+          aria-label="Play Swiss German phrase"
+        >
+          <span class="audio-icon" aria-hidden="true">▶</span>
+          <span class="audio-label">Play phrase</span>
+        </button>
+
+        <div class="phrase-copy">
+          <span class="phrase-number">01 / 296</span>
+          <p class="swiss-phrase">Grüezi, i hätt<br />e churzi Frag.</p>
+          <p class="german-phrase">Guten Tag, ich hätte eine kurze Frage.</p>
+          <p class="phrase-note">Guten Tag → Grüezi</p>
+        </div>
+
+        <div class="waveform" aria-hidden="true">
+          {Array.from({ length: 34 }).map((_, index) => (
+            <i style={`--height: ${18 + ((index * 29) % 68)}%`}></i>
+          ))}
+        </div>
+      </div>
+      <p class="audio-status" aria-live="polite"></p>
+    </section>
+
+    <section class="route-section" id="route">
+      <div class="route-intro section-shell">
+        <p class="eyebrow">The complete course</p>
+        <h2>Your route through Zürich.</h2>
+        <p>
+          Start with the sounds. Continue through the situations where
+          confidence matters. Every stop unlocks practical language you can use
+          the same day.
+        </p>
+      </div>
+
+      <div class="route-list section-shell">
+        {situations.map((situation, index) => (
+          <article class="route-stop">
+            <div class="stop-marker">
+              <span>{String(index + 1).padStart(2, "0")}</span>
+            </div>
+            <div class="stop-copy">
+              <p>{situation.meta}</p>
+              <h3>{situation.title}</h3>
+              <span>{situation.description}</span>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="features section-shell">
+      <div class="section-heading feature-heading">
+        <p class="eyebrow">Built to stick</p>
+        <h2>Less studying.<br />More joining in.</h2>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card feature-card-red">
+          <div class="feature-copy">
+            <span>01 · Practice</span>
+            <h3>Short lessons for actual conversations.</h3>
+            <p>Listen, choose, repeat, and build the instinct to answer without translating first.</p>
+          </div>
+          <div class="drill-preview">
+            <small>How do you say:</small>
+            <strong>“I would like a single ticket.”</strong>
+            <button>Ich hätt gärn es Einzelbillett. <span>✓</span></button>
+            <button>Ich bruch es Billett.</button>
+          </div>
+        </article>
+
+        <article class="feature-card feature-card-blue">
+          <div class="feature-copy">
+            <span>02 · Collect</span>
+            <h3>Your own Zürich phrasebook.</h3>
+            <p>Every phrase you meet is saved with pronunciation, context, and the High German equivalent.</p>
+          </div>
+          <div class="phrasebook-preview">
+            <div><i></i><span><b>Für underwägs, bitte.</b><small>Für unterwegs, bitte.</small></span><em>▶</em></div>
+            <div><i></i><span><b>Stimmt so, merci vilmal.</b><small>Stimmt so, vielen Dank.</small></span><em>▶</em></div>
+            <div><i></i><span><b>Chasch das langsamer säge?</b><small>Kannst du das langsamer sagen?</small></span><em>▶</em></div>
+          </div>
+        </article>
+
+        <article class="feature-card feature-card-ink">
+          <div class="feature-copy">
+            <span>03 · Progress</span>
+            <h3>A clear view of how far you’ve come.</h3>
+            <p>Build streaks, master phrases, and see which situation is ready for another pass.</p>
+          </div>
+          <div class="progress-preview">
+            <div class="level">
+              <small>LEVEL</small>
+              <strong>03</strong>
+              <i><span></span></i>
+              <em>620 TOTAL XP</em>
+            </div>
+            <div class="progress-stats">
+              <p><strong>12</strong><span>LESSONS</span></p>
+              <p><strong>86</strong><span>PHRASES</span></p>
+              <p><strong>03</strong><span>DAY STREAK</span></p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="principles section-shell">
+      <p class="eyebrow">Why this course</p>
+      <div class="principles-grid">
+        <h2>Not textbook German<br />with a Swiss flag on it.</h2>
+        <div>
+          <p><b>One dialect, clearly named.</b> The course teaches Zürich German instead of blending regional varieties together.</p>
+          <p><b>Designed for German speakers.</b> Familiar High German is used as the bridge—not as the destination.</p>
+          <p><b>No account required.</b> The course, audio, phrasebook, and learning progress work directly on your iPhone.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="download-section" id="download">
+      <div class="download-cross" aria-hidden="true"><i></i><b></b></div>
+      <p class="eyebrow">Course 01 · Zürich</p>
+      <h2>Ready when<br />the conversation starts.</h2>
+      <p>Learn for five minutes. Use it on your next tram ride.</p>
+      <a class="store-button store-button-light" href={appStoreURL || "#download"}>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M17.05 12.54c-.02-2.46 2.01-3.65 2.1-3.71a4.51 4.51 0 0 0-3.55-1.92c-1.49-.16-2.94.9-3.7.9-.77 0-1.94-.88-3.2-.85a4.7 4.7 0 0 0-3.95 2.41c-1.72 2.98-.44 7.37 1.21 9.78.83 1.18 1.8 2.5 3.06 2.45 1.23-.05 1.69-.79 3.18-.79 1.47 0 1.9.79 3.18.76 1.33-.02 2.16-1.18 2.96-2.37a9.72 9.72 0 0 0 1.35-2.74 4.25 4.25 0 0 1-2.64-3.92ZM14.63 5.33A4.3 4.3 0 0 0 15.62 2a4.39 4.39 0 0 0-2.85 1.58 4.12 4.12 0 0 0-1.02 3.22 3.63 3.63 0 0 0 2.88-1.47Z"/>
+        </svg>
+        <span>
+          <small>{appStoreURL ? "Download on the" : "Coming soon to the"}</small>
+          App Store
+        </span>
+      </a>
+    </section>
+
+    <section class="faq section-shell">
+      <div class="section-heading">
+        <p class="eyebrow">Questions, answered</p>
+        <h2>Before you say Grüezi.</h2>
+      </div>
+      <div class="faq-list">
+        <details open>
+          <summary>Is Swiss German different from German?</summary>
+          <p>Yes. Swiss German covers a family of Alemannic dialects used in everyday speech. This course uses High German as a bridge into the Zürich dialect.</p>
+        </details>
+        <details>
+          <summary>Which dialect does the app teach?</summary>
+          <p>Zürich German. The course names the region clearly so you know which pronunciation, vocabulary, and expressions you are learning.</p>
+        </details>
+        <details>
+          <summary>Do I need to speak German already?</summary>
+          <p>The course is designed for German speakers and learners who can already follow written High German.</p>
+        </details>
+        <details>
+          <summary>Can I use the app offline?</summary>
+          <p>Yes. The complete course ships with the app, and phrase audio uses the best available Swiss German voice on your iPhone.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <SiteFooter />
+
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <script>
+    const button = document.querySelector<HTMLButtonElement>("[data-speak]");
+    const status = document.querySelector<HTMLElement>(".audio-status");
+
+    button?.addEventListener("click", () => {
+      if (!("speechSynthesis" in window)) {
+        if (status) status.textContent = "Audio preview is not supported in this browser.";
+        return;
+      }
+
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(button.dataset.speak);
+      utterance.lang = "de-CH";
+      utterance.rate = 0.82;
+      button.classList.add("is-playing");
+      if (status) status.textContent = "Playing the Swiss German phrase.";
+      utterance.addEventListener("end", () => {
+        button.classList.remove("is-playing");
+        if (status) status.textContent = "";
+      });
+      window.speechSynthesis.speak(utterance);
+    });
+  </script>
+</BaseLayout>

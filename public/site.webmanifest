@@ -1,0 +1,15 @@
+{
+  "name": "Swiss German",
+  "short_name": "Swiss German",
+  "description": "Swiss German for the moments that happen every day.",
+  "icons": [
+    {
+      "src": "/app-icon.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#E32219",
+  "background_color": "#F5F3EE",
+  "display": "standalone"
+}

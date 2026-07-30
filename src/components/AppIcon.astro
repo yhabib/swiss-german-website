@@ -1,0 +1,18 @@
+---
+interface Props {
+  size?: number;
+  eager?: boolean;
+}
+
+const { size = 48, eager = false } = Astro.props;
+---
+
+<img
+  class="app-icon"
+  src="/app-icon.png"
+  alt=""
+  width={size}
+  height={size}
+  loading={eager ? "eager" : "lazy"}
+  decoding="async"
+/>
