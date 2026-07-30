@@ -2,10 +2,6 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import SiteHeader from "../components/SiteHeader.astro";
 import SiteFooter from "../components/SiteFooter.astro";
-
-const supportURL =
-  import.meta.env.PUBLIC_SUPPORT_URL ||
-  "https://github.com/yhabib/swiss-german-ios/issues/new";
 ---
 
 <BaseLayout
@@ -40,7 +36,7 @@ const supportURL =
         <section id="website">
           <span>02</span>
           <h2>This website</h2>
-          <p>The website uses Cloudflare Pages for hosting and may use Cloudflare Web Analytics to understand aggregate visits and page performance.</p>
+          <p>The website uses Cloudflare for hosting and may use Cloudflare Web Analytics to understand aggregate visits and page performance.</p>
           <p>Cloudflare Web Analytics is configured without advertising cookies. It reports aggregate information such as visits, pages viewed, approximate country, device category, and page-load performance. It is not used to build advertising profiles.</p>
         </section>
 
@@ -54,7 +50,7 @@ const supportURL =
           <span>04</span>
           <h2>Questions or requests</h2>
           <p>If you have a privacy question or believe something here is inaccurate, please contact the project through the support channel.</p>
-          <a class="legal-action" href={supportURL}>Contact support →</a>
+          <a class="legal-action" href="/support">Visit support →</a>
         </section>
       </article>
     </div>

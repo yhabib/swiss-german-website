@@ -157,20 +157,22 @@ const schema = {
 
     <section class="phrase-section section-shell" id="how-it-works">
       <div class="section-heading">
-        <p class="eyebrow">Hear the difference</p>
+        <p class="eyebrow">See the difference</p>
         <h2>One phrase can change<br />the whole interaction.</h2>
       </div>
 
       <div class="phrase-stage">
-        <button
-          class="audio-orbit"
-          type="button"
-          data-speak="Grüezi, i hätt e churzi Frag."
-          aria-label="Play Swiss German phrase"
-        >
-          <span class="audio-icon" aria-hidden="true">▶</span>
-          <span class="audio-label">Play phrase</span>
-        </button>
+        <div class="phrase-switch" aria-label="From High German to Zürich German">
+          <div class="phrase-switch-card">
+            <small>High German</small>
+            <strong>Guten Tag.</strong>
+          </div>
+          <div class="phrase-switch-arrow" aria-hidden="true">↓</div>
+          <div class="phrase-switch-card phrase-switch-card-local">
+            <small>Zürich German</small>
+            <strong>Grüezi.</strong>
+          </div>
+        </div>
 
         <div class="phrase-copy">
           <span class="phrase-number">01 / 296</span>
@@ -179,13 +181,12 @@ const schema = {
           <p class="phrase-note">Guten Tag → Grüezi</p>
         </div>
 
-        <div class="waveform" aria-hidden="true">
-          {Array.from({ length: 34 }).map((_, index) => (
-            <i style={`--height: ${18 + ((index * 29) % 68)}%`}></i>
-          ))}
+        <div class="phrase-shifts" aria-label="Phrase changes">
+          <span><small>Guten Tag</small><b>Grüezi</b></span>
+          <span><small>ich hätte</small><b>i hätt</b></span>
+          <span><small>eine kurze</small><b>e churzi</b></span>
         </div>
       </div>
-      <p class="audio-status" aria-live="polite"></p>
     </section>
 
     <section class="route-section" id="route">
@@ -320,7 +321,7 @@ const schema = {
         </details>
         <details>
           <summary>Can I use the app offline?</summary>
-          <p>Yes. The complete course ships with the app, and phrase audio uses the best available Swiss German voice on your iPhone.</p>
+          <p>Yes. The complete course ships with the app, and phrase playback uses the German speech voice installed on your iPhone.</p>
         </details>
       </div>
     </section>
@@ -329,27 +330,4 @@ const schema = {
   <SiteFooter />
 
   <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
-  <script>
-    const button = document.querySelector<HTMLButtonElement>("[data-speak]");
-    const status = document.querySelector<HTMLElement>(".audio-status");
-
-    button?.addEventListener("click", () => {
-      if (!("speechSynthesis" in window)) {
-        if (status) status.textContent = "Audio preview is not supported in this browser.";
-        return;
-      }
-
-      window.speechSynthesis.cancel();
-      const utterance = new SpeechSynthesisUtterance(button.dataset.speak);
-      utterance.lang = "de-CH";
-      utterance.rate = 0.82;
-      button.classList.add("is-playing");
-      if (status) status.textContent = "Playing the Swiss German phrase.";
-      utterance.addEventListener("end", () => {
-        button.classList.remove("is-playing");
-        if (status) status.textContent = "";
-      });
-      window.speechSynthesis.speak(utterance);
-    });
-  </script>
 </BaseLayout>

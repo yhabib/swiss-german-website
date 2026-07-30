@@ -3,9 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import SiteHeader from "../components/SiteHeader.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 
-const supportURL =
-  import.meta.env.PUBLIC_SUPPORT_URL ||
-  "https://github.com/yhabib/swiss-german-ios/issues/new";
+const supportURL = import.meta.env.PUBLIC_SUPPORT_URL?.trim();
 ---
 
 <BaseLayout
@@ -28,7 +26,15 @@ const supportURL =
           <li><i>02</i> Add your iOS version</li>
           <li><i>03</i> Include a screenshot if useful</li>
         </ol>
-        <a href={supportURL}>Open a support request →</a>
+        {
+          supportURL ? (
+            <a href={supportURL}>Open a support request →</a>
+          ) : (
+            <p class="support-availability">
+              Direct contact will be available here before the App Store launch.
+            </p>
+          )
+        }
       </div>
     </section>
 
@@ -43,7 +49,7 @@ const supportURL =
         <article>
           <span>02</span>
           <h3>No phrase audio</h3>
-          <p>Make sure your device volume is audible. iOS chooses the best available de-CH voice automatically and falls back to de-DE when needed.</p>
+          <p>Make sure your device volume is audible. Phrase playback uses the German speech voice installed on your iPhone.</p>
         </article>
         <article>
           <span>03</span>
