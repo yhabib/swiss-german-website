@@ -3,7 +3,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import SiteHeader from "../components/SiteHeader.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 
-const supportURL = import.meta.env.PUBLIC_SUPPORT_URL?.trim();
+const supportEmail = "support@swiss-german.app";
+const supportEmailURL = `mailto:${supportEmail}?subject=Swiss%20German%20support`;
+const supportURL = import.meta.env.PUBLIC_SUPPORT_URL?.trim() || supportEmailURL;
 ---
 
 <BaseLayout
@@ -26,15 +28,10 @@ const supportURL = import.meta.env.PUBLIC_SUPPORT_URL?.trim();
           <li><i>02</i> Add your iOS version</li>
           <li><i>03</i> Include a screenshot if useful</li>
         </ol>
-        {
-          supportURL ? (
-            <a href={supportURL}>Open a support request →</a>
-          ) : (
-            <p class="support-availability">
-              Direct contact will be available here before the App Store launch.
-            </p>
-          )
-        }
+        <a href={supportURL}>Open a support request →</a>
+        <p class="support-contact">
+          Email us at <a href={supportEmailURL}>{supportEmail}</a>
+        </p>
       </div>
     </section>
 

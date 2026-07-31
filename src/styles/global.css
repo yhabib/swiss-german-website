@@ -1380,14 +1380,17 @@ svg {
   font-weight: 720;
 }
 
-.support-availability {
-  margin: 0;
-  padding: 15px;
+.support-contact {
+  margin: 14px 0 0;
   color: var(--muted);
-  background: rgba(21, 23, 25, 0.04);
-  border-radius: 10px;
   text-align: center;
-  font-size: 14px;
+  font-size: 13px;
+}
+
+.support-contact a {
+  color: var(--ink);
+  border-bottom: 1px solid var(--hairline);
+  font-weight: 680;
 }
 
 .support-faq {
