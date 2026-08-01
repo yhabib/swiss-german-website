@@ -78,6 +78,12 @@ const schema = {
     price: "0",
     priceCurrency: "CHF",
   },
+  author: {
+    "@type": "Person",
+    name: "Yusef Habib",
+    url: "https://yusefhabib.com",
+    sameAs: ["https://x.com/yhabibf"],
+  },
   ...(appStoreURL ? { installUrl: appStoreURL } : {}),
 };
 ---

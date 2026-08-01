@@ -1197,6 +1197,23 @@ svg {
   font-size: 13px;
 }
 
+.founder-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.founder-link span {
+  color: var(--red);
+  font-family: var(--mono);
+  font-size: 11px;
+  transition: transform 180ms ease;
+}
+
+.founder-link:hover span {
+  transform: translate(2px, -2px);
+}
+
 .site-footer > p {
   justify-self: end;
   font-family: var(--mono);
