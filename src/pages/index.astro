@@ -248,7 +248,7 @@ const schema = {
                 </div>
                 <div class="stop-copy">
                   <p>{situation.meta}</p>
-                  <h3>{situation.title}</h3>
+                  <h4>{situation.title}</h4>
                   <span>{situation.description}</span>
                 </div>
               </article>
@@ -270,12 +270,26 @@ const schema = {
                 </div>
                 <div class="stop-copy">
                   <p>{situation.meta}</p>
-                  <h3>{situation.title}</h3>
+                  <h4>{situation.title}</h4>
                   <span>{situation.description}</span>
                 </div>
               </article>
             ))}
           </div>
+
+          <aside class="region-callout" aria-labelledby="region-callout-title">
+            <div class="region-callout-heading">
+              <p>Next stop · Your call</p>
+              <h3 id="region-callout-title">Where should we go next?</h3>
+            </div>
+            <p>
+              Zürich is the first regional profile. More regions are planned—tell
+              us which one you’d like to learn next.
+            </p>
+            <a href="mailto:support@swiss-german.app?subject=Regional%20profile%20suggestion">
+              Suggest a region <span aria-hidden="true">↗</span>
+            </a>
+          </aside>
         </section>
       </div>
     </section>
@@ -379,6 +393,10 @@ const schema = {
         <details>
           <summary>Which Swiss German does the app teach?</summary>
           <p>The app starts with a consistent, interregional learning variety—not a claimed neutral dialect. A separate Zürich profile then teaches the pronunciation, vocabulary, and expressions that are specific to the region.</p>
+        </details>
+        <details>
+          <summary>Will you add other regional profiles?</summary>
+          <p>That’s the plan. Zürich is the first, and learner feedback will help decide which region comes next.</p>
         </details>
         <details>
           <summary>Do I need to speak German already?</summary>

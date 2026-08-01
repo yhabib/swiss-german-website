@@ -834,15 +834,75 @@ svg {
   text-transform: uppercase;
 }
 
-.stop-copy h3 {
+.stop-copy h4 {
   margin: 0;
   font-size: clamp(24px, 2.3vw, 36px);
+  font-weight: 700;
   letter-spacing: -0.035em;
 }
 
 .stop-copy > span {
   color: rgba(245, 243, 238, 0.6);
   font-size: 15px;
+}
+
+.region-callout {
+  display: grid;
+  grid-template-columns: minmax(250px, 0.9fr) minmax(280px, 1.1fr) auto;
+  gap: 32px;
+  align-items: center;
+  margin: 48px 0 16px 114px;
+  padding: 30px;
+  color: var(--ink);
+  background: var(--paper);
+  border-radius: 16px;
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.18);
+}
+
+.region-callout-heading p {
+  margin: 0 0 8px;
+  color: var(--red);
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.region-callout-heading h3 {
+  margin: 0;
+  font-size: clamp(25px, 2.4vw, 38px);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.region-callout > p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.region-callout > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 16px;
+  color: white;
+  background: var(--red);
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.region-callout > a span {
+  font-family: var(--mono);
+  font-size: 11px;
+  transition: transform 180ms ease;
+}
+
+.region-callout > a:hover span {
+  transform: translate(2px, -2px);
 }
 
 .features {
@@ -1634,6 +1694,16 @@ svg {
     text-align: left;
   }
 
+  .region-callout {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-left: 114px;
+  }
+
+  .region-callout > a {
+    justify-self: start;
+  }
+
   .stop-copy {
     grid-template-columns: 1fr;
     gap: 7px;
@@ -1781,6 +1851,11 @@ svg {
   .route-group-regional {
     padding-top: 42px;
     box-shadow: 0 0 0 20px rgba(245, 243, 238, 0.04);
+  }
+
+  .region-callout {
+    margin: 36px 0 8px;
+    padding: 24px;
   }
 
   .route-list::before {
