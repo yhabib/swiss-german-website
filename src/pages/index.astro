@@ -17,6 +17,11 @@ const situations = [
     meta: "6 lessons",
   },
   {
+    title: "Smalltalk & Freiziit",
+    description: "Start conversations, talk about everyday life, and make plans naturally.",
+    meta: "2 lessons",
+  },
+  {
     title: "Feuerwehr & Iisatz",
     description: "Short calls and practical language used around volunteer fire work.",
     meta: "3 lessons",
@@ -38,8 +43,13 @@ const situations = [
   },
   {
     title: "Tram, Bus & Zug",
-    description: "Handle ZVV and SBB conversations without switching to High German.",
-    meta: "4 lessons",
+    description: "Find platforms, read departures, and ask about direct connections.",
+    meta: "1 lesson",
+  },
+  {
+    title: "ÖV im Alltag",
+    description: "Handle tickets, connections, delays, and crowded vehicles without switching language.",
+    meta: "3 lessons",
   },
   {
     title: "Büro & schaffe",
@@ -56,19 +66,36 @@ const situations = [
     description: "Practice the interactions that make up a normal week.",
     meta: "3 lessons",
   },
+  {
+    title: "Gsundheit & Praxis",
+    description: "Arrange appointments, describe symptoms, and ask for urgent help.",
+    meta: "2 lessons",
+  },
+  {
+    title: "Amt, Bank & Versicherig",
+    description: "Handle forms, accounts, bills, and important administrative questions.",
+    meta: "2 lessons",
+  },
+  {
+    title: "Dialäkt i de Schwiiz",
+    description: "Finish by recognizing famous sound and grammar differences across Switzerland.",
+    meta: "2 culture lessons",
+  },
 ];
 
 const schema = {
   "@context": "https://schema.org",
   "@type": "MobileApplication",
   name: "Swiss German",
-  description: "Learn Zürich Swiss German through short lessons built around real-life situations.",
+  description: "Learn consistent Zürichdeutsch, then recognize famous Swiss German dialect differences.",
   applicationCategory: "EducationalApplication",
   operatingSystem: "iOS 17 or later",
   inLanguage: ["en", "de-CH", "gsw"],
   featureList: [
-    "296 Zürich German phrase pairs",
-    "34 lessons across 10 real-life situations",
+    "368 Swiss German phrase pairs",
+    "42 lessons across 15 situations",
+    "One consistent contemporary Zürichdeutsch teaching dialect",
+    "A final culture chapter about regional differences",
     "On-device phrase audio",
     "Offline course access",
     "Personal phrasebook and progress tracking",
@@ -83,19 +110,19 @@ const schema = {
 ---
 
 <BaseLayout
-  title="Swiss German for real life in Zürich"
-  description="Learn the Zürich German you actually hear—in cafés, trams, offices, shops, and conversations with your neighbours."
+  title="Learn Zürichdeutsch and understand Swiss dialect differences"
+  description="Learn one consistent, contemporary Zürich dialect for everyday life, then discover why Swiss German sounds different across regions."
 >
   <SiteHeader />
 
   <main>
     <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow reveal reveal-1">Course 01 · Zürich</p>
-        <h1 class="reveal reveal-2">You know German.<br /><span>Now understand Zürich.</span></h1>
+        <p class="eyebrow reveal reveal-1">One dialect · Clearly taught</p>
+        <h1 class="reveal reveal-2">Learn Zürichdeutsch.<br /><span>Understand the differences.</span></h1>
         <p class="hero-intro reveal reveal-3">
-          Swiss German for the moments that happen every day—in cafés, trams,
-          offices, shops, and conversations with your neighbours.
+          Build confidence in one consistent Zürich dialect for everyday life.
+          Finish with a short cultural guide to the forms you will hear elsewhere.
         </p>
 
         <div class="hero-actions reveal reveal-4">
@@ -124,7 +151,7 @@ const schema = {
         <div class="phone">
           <div class="phone-top"><span>9:41</span><i></i></div>
           <div class="phone-screen">
-            <div class="phone-kicker">Course 01 · Zürich</div>
+            <div class="phone-kicker">Zürichdeutsch · Dialect culture</div>
             <div class="phone-heading">Grüezi.</div>
             <p>Swiss German for real life.</p>
             <div class="phone-ticket">
@@ -149,9 +176,9 @@ const schema = {
     </section>
 
     <section class="proof-strip" aria-label="Course facts">
-      <div><strong>296</strong><span>phrase pairs</span></div>
-      <div><strong>34</strong><span>short lessons</span></div>
-      <div><strong>10</strong><span>real-life situations</span></div>
+      <div><strong>368</strong><span>phrase pairs</span></div>
+      <div><strong>42</strong><span>short lessons</span></div>
+      <div><strong>15</strong><span>course situations</span></div>
       <div><strong>100%</strong><span>available offline</span></div>
     </section>
 
@@ -175,7 +202,7 @@ const schema = {
         </div>
 
         <div class="phrase-copy">
-          <span class="phrase-number">01 / 296</span>
+          <span class="phrase-number">01 / 350</span>
           <p class="swiss-phrase">Grüezi, i hätt<br />e churzi Frag.</p>
           <p class="german-phrase">Guten Tag, ich hätte eine kurze Frage.</p>
           <p class="phrase-note">Guten Tag → Grüezi</p>
@@ -192,11 +219,11 @@ const schema = {
     <section class="route-section" id="route">
       <div class="route-intro section-shell">
         <p class="eyebrow">The complete course</p>
-        <h2>Your route through Zürich.</h2>
+        <h2>One dialect for the whole route.</h2>
         <p>
-          Start with the sounds. Continue through the situations where
-          confidence matters. Every stop unlocks practical language you can use
-          the same day.
+          Start with Zürich sounds and continue through the situations where
+          confidence matters. The final stop explains famous dialect differences
+          without asking you to learn several ways to say everything.
         </p>
       </div>
 
@@ -278,7 +305,8 @@ const schema = {
       <div class="principles-grid">
         <h2>Not textbook German<br />with a Swiss flag on it.</h2>
         <div>
-          <p><b>One dialect, clearly named.</b> The course teaches Zürich German instead of blending regional varieties together.</p>
+          <p><b>One dialect, clearly named.</b> The practical course consistently teaches readable, contemporary Zürichdeutsch instead of blending varieties together.</p>
+          <p><b>Differences explained at the end.</b> A short culture chapter helps you recognize regional sounds and grammar without changing the dialect you speak.</p>
           <p><b>Designed for German speakers.</b> Familiar High German is used as the bridge—not as the destination.</p>
           <p><b>No account required.</b> The course, audio, phrasebook, and learning progress work directly on your iPhone.</p>
         </div>
@@ -287,7 +315,7 @@ const schema = {
 
     <section class="download-section" id="download">
       <div class="download-cross" aria-hidden="true"><i></i><b></b></div>
-      <p class="eyebrow">Course 01 · Zürich</p>
+      <p class="eyebrow">Zürichdeutsch · 42 lessons</p>
       <h2>Ready when<br />the conversation starts.</h2>
       <p>Learn for five minutes. Use it on your next tram ride.</p>
       <a class="store-button store-button-light" href={appStoreURL || "#download"}>
@@ -309,11 +337,15 @@ const schema = {
       <div class="faq-list">
         <details open>
           <summary>Is Swiss German different from German?</summary>
-          <p>Yes. Swiss German covers a family of Alemannic dialects used in everyday speech. This course uses High German as a bridge into the Zürich dialect.</p>
+          <p>Yes. Swiss German covers a family of Alemannic dialects used in everyday speech. The app uses High German as a bridge into one consistent Zürichdeutsch teaching variety.</p>
         </details>
         <details>
           <summary>Which dialect does the app teach?</summary>
-          <p>Zürich German. The course names the region clearly so you know which pronunciation, vocabulary, and expressions you are learning.</p>
+          <p>Readable, contemporary Zürichdeutsch. It is a practical teaching choice—not a claim that one dialect is the only correct Swiss German.</p>
+        </details>
+        <details>
+          <summary>What happens when another region sounds different?</summary>
+          <p>The final culture chapter introduces famous sound, vocabulary, and grammar differences. The goal is to recognize them while continuing to answer in the Zürich dialect you learned.</p>
         </details>
         <details>
           <summary>Do I need to speak German already?</summary>
