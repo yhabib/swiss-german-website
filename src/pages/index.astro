@@ -93,13 +93,13 @@ const schema = {
   inLanguage: ["en", "de-CH", "gsw"],
   featureList: [
     "350 practical Zürich course pairs and 18 culture pairs",
-    "40 course lessons and 2 culture lessons across 15 situations",
+    "40 practical lessons across 14 situations and 2 culture lessons in 1 culture situation",
     "One consistent contemporary Zürichdeutsch teaching dialect",
     "A final culture chapter about regional differences",
     "Typed Zürichdeutsch recall in the redesigned first sounds lesson",
     "Four progressive hints in the redesigned first sounds lesson",
     "Scheduled typed review across due catalog phrases",
-    "Optional phrase audio from on-device system speech",
+    "Optional phrasebook audio from on-device system speech",
     "Offline course access",
     "Productive mastery after three correct first-attempt unassisted recalls on separate local days",
   ],
@@ -120,11 +120,11 @@ const schema = {
 
 <BaseLayout
   title="Learn Zürichdeutsch through active recall"
-  description="Use High German as a bridge, type Zürichdeutsch answers, reveal hints when needed, and revisit phrases through scheduled review."
+  description="Use High German in the redesigned first sounds lesson, type due Zürichdeutsch phrases, and return through scheduled review."
 >
   <SiteHeader />
 
-  <main>
+  <main id="main-content" tabindex="-1">
     <section class="hero">
       <div class="hero-copy">
         <p class="eyebrow reveal reveal-1">One dialect · Clearly taught</p>
@@ -165,20 +165,25 @@ const schema = {
             <div class="phone-heading">Grüezi.</div>
             <p>Swiss German for real life.</p>
             <div class="phone-ticket">
-              <span>Today’s route</span>
-              <strong>8 reviews due</strong>
+              <span>Your route</span>
+              <strong>Level 03</strong>
               <div><i style="width: 62%"></i></div>
-              <small>5 reviewed · 3 remaining</small>
+              <small>620 XP · 3 day streak</small>
             </div>
-            <div class="phone-section-label">
-              <b>02</b>
-              <span>Cafi & Beiz</span>
-              <small>Review</small>
+            <div class="phone-review-card">
+              <i aria-hidden="true">✎</i>
+              <span>
+                <small>Due review</small>
+                <b>Practice 8 scheduled phrases</b>
+                <em>Typed recall keeps productive mastery separate from recognition.</em>
+              </span>
+              <strong aria-hidden="true">→</strong>
             </div>
-            <div class="phone-lessons">
-              <div class="done"><i>✓</i><span><b lang="gsw">Aacho & Platz finde</b><small>REVIEWED · 3 PHRASES</small></span></div>
-              <div class="next"><i>→</i><span><b lang="gsw">Empfehlige & reagiere</b><small>DUE NOW · 3 PHRASES</small></span></div>
-              <div><i>3</i><span><b lang="gsw">A de Theke bstelle</b><small>LATER · 2 PHRASES</small></span></div>
+            <div class="phone-review-session">
+              <div><small>Due review 1 / 8</small><i><span></span></i></div>
+              <p lang="de">Ich verstehe das nicht.</p>
+              <span lang="gsw">I verstah das nöd.</span>
+              <b>Check answer</b>
             </div>
           </div>
         </div>
@@ -188,7 +193,7 @@ const schema = {
     <section class="proof-strip" aria-label="Course facts">
       <div><strong>368</strong><span>total catalog pairs</span></div>
       <div><strong>42</strong><span>short lessons</span></div>
-      <div><strong>15</strong><span>course situations</span></div>
+      <div><strong>14 + 1</strong><span>practical + culture situations</span></div>
       <div><strong>100%</strong><span>available offline</span></div>
     </section>
 
@@ -213,7 +218,7 @@ const schema = {
 
         <div class="phrase-copy">
           <span class="phrase-number">01 / 350 practical phrases</span>
-          <p class="swiss-phrase" lang="gsw">Grüezi, i hätt<br />e churzi Frag.</p>
+          <p class="swiss-phrase" lang="gsw">Grüezi, i hätt<br />e churzi frag.</p>
           <p class="german-phrase" lang="de">Guten Tag, ich hätte eine kurze Frage.</p>
           <p class="phrase-note"><span lang="de">Guten Tag</span> → <span lang="gsw">Grüezi</span></p>
         </div>
@@ -263,10 +268,10 @@ const schema = {
         <article class="feature-card feature-card-red">
           <div class="feature-copy">
             <span>01 · Type</span>
-            <h3>Type the first sounds lesson.</h3>
-            <p>The redesigned first sounds lesson starts with High German. You type Zürichdeutsch instead of choosing from a list.</p>
+            <h3>Produce Zürichdeutsch from German.</h3>
+            <p>The redesigned first sounds lesson includes typed production from familiar High German prompts.</p>
           </div>
-          <div class="drill-preview" role="img" aria-label="Typed recall example. German: Ich verstehe das nicht. Zürichdeutsch answer: I verstah das nöd. The answer is correct without a hint.">
+          <div class="drill-preview" aria-hidden="true">
             <small>Translate into Zürichdeutsch</small>
             <strong lang="de">“Ich verstehe das nicht.”</strong>
             <div class="recall-field">
@@ -285,15 +290,14 @@ const schema = {
           <div class="feature-copy">
             <span>02 · Reveal</span>
             <h3>Reveal four hints in order.</h3>
-            <p>The redesigned first sounds lesson offers four progressive hints. Optional audio uses on-device system speech.</p>
+            <p>The redesigned first sounds lesson offers four progressive hints for its typed production activities.</p>
           </div>
-          <div class="hint-preview" role="img" aria-label="Four hint example. The hints show a German contrast, word initials, a word bank, and the full answer. Phrase audio is optional.">
+          <div class="hint-preview" aria-hidden="true">
             <div class="hint-header"><span>Hints</span><small>1 of 4 shown</small></div>
             <div class="hint-step is-shown"><i>01</i><span><small>German contrast</small><b><span lang="de">nicht</span> → <span lang="gsw">nöd</span></b></span></div>
             <div class="hint-step"><i>02</i><span><small>Word initials</small><b lang="gsw">I · v · d · n</b></span></div>
             <div class="hint-step"><i>03</i><span><small>Word bank</small><b lang="gsw">I · verstah · das · nöd</b></span></div>
             <div class="hint-step"><i>04</i><span><small>Full answer</small><b lang="gsw">I verstah das nöd.</b></span></div>
-            <div class="audio-support"><span aria-hidden="true">▶</span><b>Play phrase audio</b><small>Optional support</small></div>
           </div>
         </article>
 
@@ -327,7 +331,8 @@ const schema = {
           <p><b>One dialect, clearly named.</b> The practical course consistently teaches readable, contemporary Zürichdeutsch instead of blending varieties together.</p>
           <p><b>Differences explained at the end.</b> A short culture chapter helps you recognize regional sounds and grammar without changing the dialect you speak.</p>
           <p><b>Designed for German speakers.</b> The redesigned first sounds lesson uses High German as the bridge into typed Zürichdeutsch recall.</p>
-          <p><b>Support stays optional.</b> That lesson offers progressive hints and optional audio from on-device system speech.</p>
+          <p><b>Support stays optional.</b> Typed activities in that lesson offer progressive hints when you request them.</p>
+          <p><b>Audio stays separate.</b> The phrasebook offers optional playback through on-device system speech.</p>
           <p><b>No account required.</b> The course, review schedule, phrasebook, and progress stay directly on your iPhone.</p>
         </div>
       </div>
@@ -335,7 +340,7 @@ const schema = {
 
     <section class="download-section" id="download">
       <div class="download-cross" aria-hidden="true"><i></i><b></b></div>
-      <p class="eyebrow">Zürichdeutsch · 42 lessons</p>
+      <p class="eyebrow">Zürichdeutsch · 40 practical + 2 culture lessons</p>
       <h2>The whole course.<br />One review route.</h2>
       <p>Complete a short lesson or answer the phrases due for review.</p>
       <a class="store-button store-button-light" href={appStoreURL || "#download"}>
@@ -377,11 +382,11 @@ const schema = {
         </details>
         <details>
           <summary>Can I use the app offline?</summary>
-          <p>Yes. The complete course ships with the app, and phrase playback uses the German speech voice installed on your iPhone.</p>
+          <p>Yes. The complete course ships with the app. Phrasebook playback uses system speech installed on your iPhone.</p>
         </details>
         <details>
           <summary>How does phrase practice work?</summary>
-          <p>The redesigned first sounds lesson uses typed answers and four progressive hints. Scheduled review uses typed answers for due catalog phrases. Optional audio uses on-device system speech.</p>
+          <p>The redesigned first sounds lesson mixes activity types. Its typed production activities offer four progressive hints. Scheduled review uses typed answers for due catalog phrases.</p>
         </details>
       </div>
     </section>
