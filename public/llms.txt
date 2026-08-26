@@ -1,0 +1,33 @@
+# Swiss German
+
+> Swiss German is an independent iPhone learning app for readable, contemporary Zürichdeutsch. It uses Standard German prompts, typed recall, progressive hints, and scheduled review.
+
+The app teaches one consistent Zürichdeutsch variety for practical daily situations. It does not present one dialect as the only correct Swiss German.
+
+The course contains 350 practical Zürichdeutsch phrase pairs. Two culture lessons add 18 regional phrase pairs for recognition.
+
+The app is coming soon to the App Store. The complete course works offline and does not require an account.
+
+## Start here
+
+- [Swiss German app](https://swiss-german.app/): Product overview, course scope, learning method, and app features.
+- [Learn Swiss German](https://swiss-german.app/learn-swiss-german/): A practical learning route through one consistent Zürichdeutsch variety.
+- [About the project](https://swiss-german.app/about/): Project purpose, teaching method, language scope, and content principles.
+
+## Learning guides
+
+- [Swiss German phrases](https://swiss-german.app/swiss-german-phrases/): Sixteen Zürichdeutsch phrase pairs for common daily situations.
+- [I hätt gärn](https://swiss-german.app/phrases/ich-haett-gaern/): Meaning and course examples for a useful request pattern.
+- [Swiss German and High German](https://swiss-german.app/swiss-german-vs-high-german/): Practical differences between Zürichdeutsch and Standard German.
+- [Zürichdeutsch](https://swiss-german.app/zurich-german/): Dialect scope, usage, spelling, and regional variation.
+
+## Support and policies
+
+- [Support](https://swiss-german.app/support/): App help, content corrections, and project questions.
+- [Privacy](https://swiss-german.app/privacy/): Account, storage, analytics, and network-access information.
+
+## Contact
+
+- Email: support@swiss-german.app
+- Founder: Yusef Habib
+
