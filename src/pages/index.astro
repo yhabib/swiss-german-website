@@ -85,42 +85,65 @@ const situations = [
 
 const schema = {
   "@context": "https://schema.org",
-  "@type": "MobileApplication",
-  name: "Swiss German",
-  description: "Learn consistent Zürichdeutsch, then recognize famous Swiss German dialect differences.",
-  applicationCategory: "EducationalApplication",
-  operatingSystem: "iOS 17 or later",
-  inLanguage: ["en", "de-CH", "gsw"],
-  featureList: [
-    "350 practical Zürich course pairs and 18 culture pairs",
-    "40 practical lessons across 14 situations and 2 culture lessons in 1 culture situation",
-    "One consistent contemporary Zürichdeutsch teaching dialect",
-    "A final culture chapter about regional differences",
-    "Typed Zürichdeutsch recall in the redesigned first sounds lesson",
-    "Four progressive hints in the redesigned first sounds lesson",
-    "Scheduled typed review across due catalog phrases",
-    "Optional on-device answer tones and haptics",
-    "Offline course access",
-    "Productive mastery after three correct first-attempt unassisted recalls on separate local days",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://swiss-german.app/#website",
+      name: "Swiss German",
+      alternateName: "Swiss German app",
+      url: "https://swiss-german.app/",
+      description: "Learn practical Swiss German through one consistent Zürichdeutsch teaching variety.",
+      inLanguage: "en",
+      publisher: { "@id": "https://swiss-german.app/#organization" },
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://swiss-german.app/#organization",
+      name: "Swiss German",
+      url: "https://swiss-german.app/",
+      logo: "https://swiss-german.app/app-icon.png",
+      founder: {
+        "@type": "Person",
+        name: "Yusef Habib",
+        url: "https://yusefhabib.com",
+        sameAs: ["https://x.com/yhabibf"],
+      },
+    },
+    {
+      "@type": "MobileApplication",
+      "@id": "https://swiss-german.app/#app",
+      name: "Swiss German",
+      description: "Learn consistent Zürichdeutsch, then recognize famous Swiss German dialect differences.",
+      applicationCategory: "EducationalApplication",
+      operatingSystem: "iOS 17 or later",
+      inLanguage: ["en", "de-CH", "gsw"],
+      featureList: [
+        "350 practical Zürich course pairs and 18 culture pairs",
+        "40 practical lessons across 14 situations and 2 culture lessons in 1 culture situation",
+        "One consistent contemporary Zürichdeutsch teaching dialect",
+        "A final culture chapter about regional differences",
+        "Typed Zürichdeutsch recall in the redesigned first sounds lesson",
+        "Four progressive hints in the redesigned first sounds lesson",
+        "Scheduled typed review across due catalog phrases",
+        "Optional on-device answer tones and haptics",
+        "Offline course access",
+        "Productive mastery after three correct first-attempt unassisted recalls on separate local days",
+      ],
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "CHF",
+      },
+      author: { "@id": "https://swiss-german.app/#organization" },
+      ...(appStoreURL ? { installUrl: appStoreURL } : {}),
+    },
   ],
-  offers: {
-    "@type": "Offer",
-    price: "0",
-    priceCurrency: "CHF",
-  },
-  author: {
-    "@type": "Person",
-    name: "Yusef Habib",
-    url: "https://yusefhabib.com",
-    sameAs: ["https://x.com/yhabibf"],
-  },
-  ...(appStoreURL ? { installUrl: appStoreURL } : {}),
 };
 ---
 
 <BaseLayout
-  title="Learn Zürichdeutsch through active recall"
-  description="Use High German in the redesigned first sounds lesson, type due Zürichdeutsch phrases, and return through scheduled review."
+  title="Learn Swiss German (Zürichdeutsch) | iPhone App"
+  description="A Swiss German iPhone app for practical Zürichdeutsch, with 368 phrase pairs, typed recall, scheduled review, and offline lessons."
 >
   <SiteHeader />
 
@@ -128,7 +151,7 @@ const schema = {
     <section class="hero">
       <div class="hero-copy">
         <p class="eyebrow reveal reveal-1">One dialect · Clearly taught</p>
-        <h1 class="reveal reveal-2">Learn Zürichdeutsch.<br /><span>Understand the differences.</span></h1>
+        <h1 class="reveal reveal-2">Learn Swiss German.<br /><span>Speak Zürichdeutsch.</span></h1>
         <p class="hero-intro reveal reveal-3">
           Use familiar High German as a bridge into one consistent Zürich dialect.
           The redesigned first sounds lesson uses typed answers and progressive hints.
@@ -352,6 +375,39 @@ const schema = {
           App Store
         </span>
       </a>
+    </section>
+
+    <section class="guide-section section-shell" aria-labelledby="guide-section-title">
+      <div class="section-heading">
+        <p class="eyebrow">Learn before you open the app</p>
+        <h2 id="guide-section-title">Useful answers.<br />One clear dialect.</h2>
+      </div>
+      <div class="guide-grid">
+        <a href="/learn-swiss-german/">
+          <span>01 · Start here</span>
+          <h3>How to learn Swiss German</h3>
+          <p>Choose one dialect and turn familiar Standard German into practical recall.</p>
+          <b aria-hidden="true">→</b>
+        </a>
+        <a href="/swiss-german-phrases/">
+          <span>02 · Phrasebook</span>
+          <h3>Swiss German phrases</h3>
+          <p>Use 16 Zürichdeutsch phrases for greetings, cafés, transport, and understanding.</p>
+          <b aria-hidden="true">→</b>
+        </a>
+        <a href="/zurich-german/">
+          <span>03 · Dialect guide</span>
+          <h3>What is Zürichdeutsch?</h3>
+          <p>Understand the dialect name, its writing, and natural regional variation.</p>
+          <b aria-hidden="true">→</b>
+        </a>
+        <a href="/swiss-german-vs-high-german/">
+          <span>04 · Comparison</span>
+          <h3>Swiss German vs High German</h3>
+          <p>Compare everyday speech with the Standard German you already recognize.</p>
+          <b aria-hidden="true">→</b>
+        </a>
+      </div>
     </section>
 
     <section class="faq section-shell">

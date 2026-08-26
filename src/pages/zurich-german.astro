@@ -1,0 +1,132 @@
+---
+import LearnLayout from "../layouts/LearnLayout.astro";
+
+const related = [
+  {
+    href: "/learn-swiss-german/",
+    kicker: "Start here",
+    title: "Build a practical learning route",
+    description: "Move from familiar Standard German into consistent Zürichdeutsch recall.",
+  },
+  {
+    href: "/swiss-german-vs-high-german/",
+    kicker: "Comparison",
+    title: "Compare spoken and Standard German",
+    description: "See how context, sound, vocabulary, and grammar change between the two forms.",
+  },
+  {
+    href: "/swiss-german-phrases/",
+    kicker: "Phrasebook",
+    title: "Use Zürichdeutsch in daily life",
+    description: "Practice complete phrases for greetings, cafés, understanding, and transport.",
+  },
+];
+---
+
+<LearnLayout
+  title="Zürichdeutsch: A Guide to Zurich German"
+  description="Understand Zürichdeutsch, the Swiss German dialect used in Zürich. Learn its role, spelling, practical differences, and useful examples."
+  eyebrow="Zürichdeutsch · Zurich German"
+  heading="One city. One useful starting dialect."
+  intro="Zürichdeutsch is the Swiss German dialect associated with Zürich. Learn one readable form for speaking, then recognize how real speakers vary it."
+  toc={[
+    { id: "name", label: "What the name means" },
+    { id: "use", label: "Where people use it" },
+    { id: "patterns", label: "Useful patterns" },
+    { id: "spelling", label: "How spelling works" },
+    { id: "variation", label: "Regional variation" },
+  ]}
+  related={related}
+>
+  <section id="name" class="learn-section">
+    <span class="section-number">01</span>
+    <div>
+      <p class="eyebrow">Two familiar names</p>
+      <h2>Zürichdeutsch means Zurich German.</h2>
+      <p>The English and Standard German names both point to the dialect around Zürich.</p>
+      <div class="name-board" aria-label="Names for the Zurich dialect">
+        <span><small>English</small><b>Zurich German</b></span>
+        <span><small>Standard German</small><b lang="de">Zürichdeutsch</b></span>
+      </div>
+    </div>
+  </section>
+
+  <section id="use" class="learn-section">
+    <span class="section-number">02</span>
+    <div>
+      <p class="eyebrow">Everyday speech</p>
+      <h2>People speak it more often than they write it.</h2>
+      <p>
+        You can hear Zürichdeutsch with family, friends, colleagues, and service staff. Speakers often use Standard German for formal writing.
+      </p>
+      <div class="use-grid">
+        <article><span>Speak</span><h3 lang="gsw">Grüezi, i hätt e churzi frag.</h3><p>Polite spoken conversation</p></article>
+        <article><span>Write</span><h3 lang="de">Guten Tag, ich hätte eine kurze Frage.</h3><p>Standard German equivalent</p></article>
+      </div>
+      <p>
+        The boundary is not absolute. People also write dialect in messages, social posts, and informal notes.
+      </p>
+    </div>
+  </section>
+
+  <section id="patterns" class="learn-section">
+    <span class="section-number">03</span>
+    <div>
+      <p class="eyebrow">Notice complete contrasts</p>
+      <h2>Start with patterns inside useful phrases.</h2>
+      <div class="contrast-list">
+        <article>
+          <span lang="de">Ich</span><b aria-hidden="true">→</b><span lang="gsw">I</span>
+          <p><i lang="de">Ich verstehe</i> becomes <i lang="gsw">I verstah</i>.</p>
+        </article>
+        <article>
+          <span lang="de">nicht</span><b aria-hidden="true">→</b><span lang="gsw">nöd</span>
+          <p><i lang="de">Ich verstehe das nicht</i> becomes <i lang="gsw">I verstah das nöd</i>.</p>
+        </article>
+        <article>
+          <span lang="de">Guten Tag</span><b aria-hidden="true">→</b><span lang="gsw">Grüezi</span>
+          <p>A common formal greeting uses a different complete word.</p>
+        </article>
+      </div>
+      <p>
+        Treat these as examples, not rules for changing every German sentence. Complete phrases protect you from false patterns.
+      </p>
+    </div>
+  </section>
+
+  <section id="spelling" class="learn-section">
+    <span class="section-number">04</span>
+    <div>
+      <p class="eyebrow">Readable, not official</p>
+      <h2>Swiss German has no single standard spelling.</h2>
+      <p>
+        The same spoken word can appear in several written forms. Writers can show more sound detail or stay closer to Standard German.
+      </p>
+      <ul class="check-list">
+        <li>Expect several correct-looking spellings.</li>
+        <li>Choose one clear system while you learn.</li>
+        <li>Connect writing to speech whenever possible.</li>
+        <li>Do not treat a different spelling as a different word too quickly.</li>
+      </ul>
+      <p>
+        This site uses readable, contemporary Zürichdeutsch. It favors clear recall over a complete record of every sound.
+      </p>
+    </div>
+  </section>
+
+  <section id="variation" class="learn-section">
+    <span class="section-number">05</span>
+    <div>
+      <p class="eyebrow">Beyond the city line</p>
+      <h2>Real speech still changes across Zürich.</h2>
+      <p>
+        Age, neighborhood, family, and nearby regions all affect speech. No course form can represent every speaker.
+      </p>
+      <div class="learn-callout">
+        <span>Course principle</span>
+        <p>Produce one consistent teaching form. Recognize natural differences without labeling them as errors.</p>
+      </div>
+      <a class="article-link" href="/swiss-german-phrases/">See the teaching form in useful phrases →</a>
+    </div>
+  </section>
+</LearnLayout>

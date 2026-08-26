@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://swiss-german.app/sitemap-index.xml

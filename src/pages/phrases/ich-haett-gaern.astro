@@ -1,0 +1,127 @@
+---
+import LearnLayout from "../../layouts/LearnLayout.astro";
+
+const related = [
+  {
+    href: "/swiss-german-phrases/",
+    kicker: "Phrasebook",
+    title: "Swiss German phrases for daily life",
+    description: "Use practical Zürichdeutsch for greetings, cafés, transport, and simple conversations.",
+  },
+  {
+    href: "/zurich-german/",
+    kicker: "Dialect",
+    title: "What makes Zürichdeutsch distinct?",
+    description: "Learn how the Zürich dialect relates to Swiss German and Standard German.",
+  },
+  {
+    href: "/learn-swiss-german/",
+    kicker: "Start here",
+    title: "A practical route into Swiss German",
+    description: "Choose one dialect and build useful recall from the German you already know.",
+  },
+];
+---
+
+<LearnLayout
+  title="I hätt gärn: Meaning and Examples in Swiss German"
+  description="Learn what “I hätt gärn” means in Swiss German. See practical Zürichdeutsch examples for cafés, shops, and polite requests."
+  eyebrow="One phrase · Many useful moments"
+  heading="I hätt gärn."
+  intro="This Zürichdeutsch phrase means “I would like.” Use it to order, shop, and make a polite request without changing to Standard German."
+  toc={[
+    { id: "meaning", label: "Meaning" },
+    { id: "examples", label: "Useful examples" },
+    { id: "build", label: "Build the phrase" },
+    { id: "spelling", label: "Spelling and dialect" },
+  ]}
+  related={related}
+>
+  <section id="meaning" class="learn-section">
+    <span class="section-number">01</span>
+    <div>
+      <p class="eyebrow">Direct translation</p>
+      <h2>Use it when you want something.</h2>
+      <div class="translation-ticket">
+        <div>
+          <small lang="de">Standard German</small>
+          <strong lang="de">Ich hätte gern …</strong>
+        </div>
+        <span aria-hidden="true">→</span>
+        <div>
+          <small lang="gsw">Zürichdeutsch</small>
+          <strong lang="gsw">I hätt gärn …</strong>
+        </div>
+        <p>English: <b>I would like …</b></p>
+      </div>
+      <p>
+        The phrase is polite and direct. Add the item after <i lang="gsw">gärn</i>, then finish with
+        <i lang="gsw">bitte</i> when it feels natural.
+      </p>
+    </div>
+  </section>
+
+  <section id="examples" class="learn-section">
+    <span class="section-number">02</span>
+    <div>
+      <p class="eyebrow">At the counter</p>
+      <h2>Two requests you can use today.</h2>
+      <div class="example-list">
+        <article>
+          <span>01 · Café</span>
+          <h3 lang="gsw">I hätt gärn en flat white, bitte.</h3>
+          <p lang="de">Ich hätte gerne einen Flat White, bitte.</p>
+          <small>I would like a flat white, please.</small>
+        </article>
+        <article>
+          <span>02 · Shop</span>
+          <h3 lang="gsw">I hätt gärn e quittig.</h3>
+          <p lang="de">Ich hätte gern eine Quittung.</p>
+          <small>I would like a receipt.</small>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="build" class="learn-section">
+    <span class="section-number">03</span>
+    <div>
+      <p class="eyebrow">Make it productive</p>
+      <h2>Keep the frame. Change the ending.</h2>
+      <p>
+        Learn the phrase as a reusable frame. Replace only the item until the beginning feels automatic.
+      </p>
+      <div class="phrase-builder" aria-label="Phrase building pattern">
+        <span lang="gsw">I hätt gärn</span>
+        <b>+</b>
+        <div>
+          <i lang="gsw">en flat white, bitte</i>
+          <i lang="gsw">e quittig</i>
+        </div>
+      </div>
+      <div class="learn-callout">
+        <span>Practice route</span>
+        <p>Read the German prompt. Say the Zürichdeutsch phrase before you reveal the answer.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="spelling" class="learn-section">
+    <span class="section-number">04</span>
+    <div>
+      <p class="eyebrow">No single standard spelling</p>
+      <h2>You will see more than one written form.</h2>
+      <p>
+        Swiss German is mainly spoken. Writers choose spellings that fit their dialect, audience, and preferred sound detail.
+      </p>
+      <ul class="check-list">
+        <li><b lang="gsw">I hätt gärn</b> is a readable Zürichdeutsch form used in this course.</li>
+        <li>The course uses <b lang="gsw">i</b> consistently for the first-person pronoun.</li>
+        <li>The course uses <b lang="gsw">gärn</b> consistently in this request pattern.</li>
+      </ul>
+      <p>
+        Do not stop speaking because another writer uses a different form. Listen for the shared phrase and stay consistent.
+      </p>
+    </div>
+  </section>
+</LearnLayout>

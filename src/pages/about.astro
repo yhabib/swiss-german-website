@@ -1,0 +1,121 @@
+---
+import LearnLayout from "../layouts/LearnLayout.astro";
+
+const related = [
+  {
+    href: "/learn-swiss-german/",
+    kicker: "Learning guide",
+    title: "Start the practical route",
+    description: "Learn why one consistent dialect makes early speaking practice clearer.",
+  },
+  {
+    href: "/zurich-german/",
+    kicker: "Dialect scope",
+    title: "Understand the Zürichdeutsch choice",
+    description: "Read how the course handles spelling, regional speech, and teaching forms.",
+  },
+  {
+    href: "/support/",
+    kicker: "Contact",
+    title: "Send a correction or question",
+    description: "Contact the project when a phrase, explanation, or app behavior needs attention.",
+  },
+];
+---
+
+<LearnLayout
+  title="About the Swiss German App and Teaching Method"
+  description="Learn why the Swiss German app teaches one readable Zürichdeutsch variety through Standard German prompts, active recall, and spaced review."
+  eyebrow="Independent project · Clear teaching scope"
+  heading="Built for useful Swiss German recall."
+  intro="Swiss German is an independent learning project by Yusef Habib. It teaches one consistent Zürichdeutsch variety for practical daily situations."
+  toc={[
+    { id: "purpose", label: "Project purpose" },
+    { id: "method", label: "Teaching method" },
+    { id: "scope", label: "Language scope" },
+    { id: "quality", label: "Quality principles" },
+    { id: "contact", label: "Corrections and contact" },
+  ]}
+  related={related}
+  schemaType="AboutPage"
+>
+  <section id="purpose" class="learn-section">
+    <span class="section-number">01</span>
+    <div>
+      <p class="eyebrow">Why it exists</p>
+      <h2>Daily situations need more than recognition.</h2>
+      <p>
+        Many German learners can understand a written phrase but cannot retrieve its spoken Swiss German form. This project trains that retrieval.
+      </p>
+      <p>
+        The course focuses on cafés, work, housing, transport, health, administration, and other situations that shape a normal week.
+      </p>
+    </div>
+  </section>
+
+  <section id="method" class="learn-section">
+    <span class="section-number">02</span>
+    <div>
+      <p class="eyebrow">The learning method</p>
+      <h2>Meaning first. Recall second. Support when needed.</h2>
+      <div class="route-principles">
+        <article><span>01</span><h3>Bridge</h3><p>Start from a familiar Standard German prompt.</p></article>
+        <article><span>02</span><h3>Recall</h3><p>Produce Zürichdeutsch before the answer appears.</p></article>
+        <article><span>03</span><h3>Return</h3><p>Review due phrases across separate days.</p></article>
+      </div>
+      <p>
+        Progressive hints can reduce difficulty without giving the complete answer immediately. Unassisted recall remains separate from recognition.
+      </p>
+    </div>
+  </section>
+
+  <section id="scope" class="learn-section">
+    <span class="section-number">03</span>
+    <div>
+      <p class="eyebrow">A clear language choice</p>
+      <h2>The practical course teaches Zürichdeutsch.</h2>
+      <p>
+        Swiss German contains many regional dialects. The app does not combine several forms into one artificial answer system.
+      </p>
+      <ul class="check-list">
+        <li>The practical course uses one readable, contemporary Zürichdeutsch teaching form.</li>
+        <li>Regional forms can remain correct outside the course answer system.</li>
+        <li>A culture chapter introduces selected differences for recognition.</li>
+        <li>The writing supports learning and does not claim official spelling status.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="quality" class="learn-section">
+    <span class="section-number">04</span>
+    <div>
+      <p class="eyebrow">Content principles</p>
+      <h2>Accuracy includes clear limits.</h2>
+      <div class="quality-list">
+        <article><span>Useful</span><p>Every phrase belongs to a clear daily situation.</p></article>
+        <article><span>Consistent</span><p>Recall answers follow the same teaching variety.</p></article>
+        <article><span>Transparent</span><p>The site names its dialect and explains natural variation.</p></article>
+        <article><span>Correctable</span><p>Feedback can lead to a content correction and clear update.</p></article>
+      </div>
+      <p>
+        The project does not present one dialect as the only correct Swiss German. It provides a stable first route into real variation.
+      </p>
+    </div>
+  </section>
+
+  <section id="contact" class="learn-section">
+    <span class="section-number">05</span>
+    <div>
+      <p class="eyebrow">Built by Yusef Habib</p>
+      <h2>Questions and corrections are welcome.</h2>
+      <p>
+        Include the exact phrase, page, or lesson when you report a content concern. Add the regional form when it matters.
+      </p>
+      <div class="learn-callout">
+        <span>Contact</span>
+        <p>Use the support page for app help, phrase corrections, and project questions.</p>
+        <a href="/support/">Open support →</a>
+      </div>
+    </div>
+  </section>
+</LearnLayout>

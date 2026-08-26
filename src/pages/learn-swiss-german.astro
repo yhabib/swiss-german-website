@@ -1,0 +1,160 @@
+---
+import LearnLayout from "../layouts/LearnLayout.astro";
+
+const related = [
+  {
+    href: "/swiss-german-phrases/",
+    kicker: "Phrasebook",
+    title: "Start with 16 useful phrases",
+    description: "Learn greetings, café requests, clarification, and transport phrases in Zürichdeutsch.",
+  },
+  {
+    href: "/zurich-german/",
+    kicker: "Dialect guide",
+    title: "Why this course teaches Zürichdeutsch",
+    description: "Understand the dialect choice and the writing system used throughout the course.",
+  },
+  {
+    href: "/swiss-german-vs-high-german/",
+    kicker: "Comparison",
+    title: "Use High German as your bridge",
+    description: "See how familiar Standard German becomes practical spoken Swiss German.",
+  },
+];
+---
+
+<LearnLayout
+  title="Learn Swiss German: A Practical Zürichdeutsch Guide"
+  description="Learn Swiss German through one consistent Zürichdeutsch dialect. Follow a practical route from Standard German to useful everyday recall."
+  eyebrow="Start here · One clear dialect"
+  heading="Learn Swiss German without mixing dialects."
+  intro="Choose one practical dialect first. Use Standard German as a bridge, then build the phrases you need for daily life in Zürich."
+  toc={[
+    { id: "what", label: "What Swiss German is" },
+    { id: "dialect", label: "Choose one dialect" },
+    { id: "bridge", label: "Use High German" },
+    { id: "routine", label: "Build a routine" },
+    { id: "first-week", label: "Your first week" },
+  ]}
+  related={related}
+>
+  <section id="what" class="learn-section">
+    <span class="section-number">01</span>
+    <div>
+      <p class="eyebrow">The starting point</p>
+      <h2>Swiss German is a family of dialects.</h2>
+      <p>
+        People use Swiss German in everyday conversation across German-speaking Switzerland. The sounds, words, and grammar change between regions.
+      </p>
+      <p>
+        Standard German remains important for formal writing, news, school, and many official settings. You do not need to replace it.
+      </p>
+      <div class="learn-callout">
+        <span>Useful goal</span>
+        <p>Understand several dialects over time. Produce one consistent dialect when you speak.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="dialect" class="learn-section">
+    <span class="section-number">02</span>
+    <div>
+      <p class="eyebrow">A stable route</p>
+      <h2>Choose the dialect around your daily life.</h2>
+      <p>
+        Start with the dialect used where you live, work, or spend time. This course uses readable, contemporary Zürichdeutsch.
+      </p>
+      <div class="route-principles">
+        <article>
+          <span>01</span>
+          <h3>Stay consistent</h3>
+          <p>Use one form during recall. This keeps early practice clear.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Notice differences</h3>
+          <p>Listen for regional forms without treating them as mistakes.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Expand later</h3>
+          <p>Add recognition after your first speaking patterns feel stable.</p>
+        </article>
+      </div>
+      <a class="article-link" href="/zurich-german/">Read the Zürichdeutsch dialect guide →</a>
+    </div>
+  </section>
+
+  <section id="bridge" class="learn-section">
+    <span class="section-number">03</span>
+    <div>
+      <p class="eyebrow">Start with what you know</p>
+      <h2>Use High German as the bridge.</h2>
+      <p>
+        A familiar German prompt gives you meaning and structure. Your task is to produce the Zürichdeutsch form before you reveal it.
+      </p>
+      <div class="translation-ticket translation-ticket-wide">
+        <div>
+          <small lang="de">Prompt</small>
+          <strong lang="de">Ich verstehe das nicht.</strong>
+        </div>
+        <span aria-hidden="true">→</span>
+        <div>
+          <small lang="gsw">Recall</small>
+          <strong lang="gsw">I verstah das nöd.</strong>
+        </div>
+      </div>
+      <p>
+        This method suits learners who already follow written Standard German. Beginners can start with meaning and complete phrases first.
+      </p>
+    </div>
+  </section>
+
+  <section id="routine" class="learn-section">
+    <span class="section-number">04</span>
+    <div>
+      <p class="eyebrow">Ten useful minutes</p>
+      <h2>Build recall, then meet the language outside.</h2>
+      <ol class="learning-steps">
+        <li>
+          <span>01 · Preview</span>
+          <div><h3>Read five useful phrase pairs.</h3><p>Make sure you understand the complete situation.</p></div>
+        </li>
+        <li>
+          <span>02 · Produce</span>
+          <div><h3>Hide the answer and say it.</h3><p>Recall matters more than another passive reading.</p></div>
+        </li>
+        <li>
+          <span>03 · Review</span>
+          <div><h3>Return on another day.</h3><p>Short, spaced sessions make the phrase easier to retrieve.</p></div>
+        </li>
+        <li>
+          <span>04 · Listen</span>
+          <div><h3>Notice the phrase in real speech.</h3><p>Use work, shops, friends, radio, or local video.</p></div>
+        </li>
+        <li>
+          <span>05 · Use</span>
+          <div><h3>Say one phrase in context.</h3><p>A small real exchange gives the phrase a clear purpose.</p></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="first-week" class="learn-section">
+    <span class="section-number">05</span>
+    <div>
+      <p class="eyebrow">A simple first week</p>
+      <h2>Seven days. Seven small outcomes.</h2>
+      <div class="week-grid">
+        <article><span>Mon</span><p>Learn four greetings.</p></article>
+        <article><span>Tue</span><p>Order one drink.</p></article>
+        <article><span>Wed</span><p>Ask for repetition.</p></article>
+        <article><span>Thu</span><p>Review without notes.</p></article>
+        <article><span>Fri</span><p>Listen for one phrase.</p></article>
+        <article><span>Sat</span><p>Use one phrase outside.</p></article>
+        <article><span>Sun</span><p>Keep the useful phrases.</p></article>
+      </div>
+      <a class="article-link" href="/swiss-german-phrases/">Choose your first phrases →</a>
+    </div>
+  </section>
+</LearnLayout>
