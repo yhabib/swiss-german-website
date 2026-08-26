@@ -1,0 +1,125 @@
+---
+import LearnLayout from "../layouts/LearnLayout.astro";
+
+const related = [
+  {
+    href: "/phrases/ich-haett-gaern/",
+    kicker: "Phrase focus",
+    title: "How to use “I hätt gärn”",
+    description: "Build polite requests for cafés, bakeries, restaurants, and shops.",
+  },
+  {
+    href: "/swiss-german-vs-high-german/",
+    kicker: "Comparison",
+    title: "Swiss German and High German",
+    description: "Compare everyday Zürichdeutsch with the Standard German you already recognize.",
+  },
+  {
+    href: "/learn-swiss-german/",
+    kicker: "Learning route",
+    title: "Turn useful phrases into recall",
+    description: "Use a small daily routine to produce Swiss German instead of only recognizing it.",
+  },
+];
+
+const phraseGroups = [
+  {
+    id: "greetings",
+    number: "01",
+    eyebrow: "Arrive well",
+    title: "Greetings and goodbyes",
+    phrases: [
+      ["Grüezi.", "Guten Tag.", "Hello."],
+      ["Hoi zäme.", "Hallo zusammen.", "Hello everyone."],
+      ["Guete Morge.", "Guten Morgen.", "Good morning."],
+      ["Ade, machs guet.", "Tschüss, mach’s gut.", "Bye, take care."],
+    ],
+  },
+  {
+    id: "cafe",
+    number: "02",
+    eyebrow: "Order naturally",
+    title: "Cafés and restaurants",
+    phrases: [
+      ["I hätt gärn en Kafi.", "Ich hätte gern einen Kaffee.", "I would like a coffee."],
+      ["Für underwägs, bitte.", "Für unterwegs, bitte.", "To take away, please."],
+      ["D Rächnig, bitte.", "Die Rechnung, bitte.", "The bill, please."],
+      ["Nei danke, das isch alles.", "Nein danke, das ist alles.", "No thank you, that is all."],
+    ],
+  },
+  {
+    id: "understanding",
+    number: "03",
+    eyebrow: "Stay in the conversation",
+    title: "Understanding and clarification",
+    phrases: [
+      ["I verstah das nöd.", "Ich verstehe das nicht.", "I do not understand that."],
+      ["Chasch das nomal säge?", "Kannst du das noch einmal sagen?", "Can you say that again?"],
+      ["Was heisst das?", "Was bedeutet das?", "What does that mean?"],
+      ["Chasch chli langsamer rede?", "Kannst du etwas langsamer sprechen?", "Can you speak more slowly?"],
+    ],
+  },
+  {
+    id: "moving",
+    number: "04",
+    eyebrow: "Move through Zürich",
+    title: "Tram, train, and directions",
+    phrases: [
+      ["Wo isch s Gleis drü?", "Wo ist Gleis drei?", "Where is platform three?"],
+      ["Wo muess i umstiige?", "Wo muss ich umsteigen?", "Where do I need to change?"],
+      ["Isch das s richtige Tram?", "Ist das die richtige Strassenbahn?", "Is this the correct tram?"],
+      ["Wie chumi zum Bahnhof?", "Wie komme ich zum Bahnhof?", "How do I get to the station?"],
+    ],
+  },
+];
+---
+
+<LearnLayout
+  title="Swiss German Phrases for Everyday Life in Zürich"
+  description="Learn practical Swiss German phrases in readable Zürichdeutsch, with Standard German and English meanings for daily life in Zürich."
+  eyebrow="16 phrases · Four daily situations"
+  heading="Swiss German phrases for real life."
+  intro="Start with complete phrases you can use in Zürich. Each phrase includes Standard German and English, so meaning never becomes a guessing exercise."
+  toc={phraseGroups.map((group) => ({ id: group.id, label: group.title }))}
+  related={related}
+>
+  {phraseGroups.map((group) => (
+    <section id={group.id} class="learn-section phrasebook-section">
+      <span class="section-number">{group.number}</span>
+      <div>
+        <p class="eyebrow">{group.eyebrow}</p>
+        <h2>{group.title}</h2>
+        <div class="phrase-table" role="table" aria-label={group.title}>
+          <div class="phrase-table-head" role="row">
+            <span role="columnheader">Zürichdeutsch</span>
+            <span role="columnheader">Standard German</span>
+            <span role="columnheader">English</span>
+          </div>
+          {group.phrases.map((phrase) => (
+            <div class="phrase-table-row" role="row">
+              <strong role="cell" lang="gsw">{phrase[0]}</strong>
+              <span role="cell" lang="de">{phrase[1]}</span>
+              <span role="cell">{phrase[2]}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <section class="learn-section">
+    <span class="section-number">05</span>
+    <div>
+      <p class="eyebrow">Practice, not decoration</p>
+      <h2>Use one phrase in one real moment.</h2>
+      <p>
+        Choose one phrase before you leave home. Recall it once without looking, then use it when the situation appears.
+      </p>
+      <div class="learn-callout">
+        <span>Good first choice</span>
+        <p><b lang="gsw">I hätt gärn en Kafi.</b> One useful frame can produce many new requests.</p>
+        <a href="/phrases/ich-haett-gaern/">Learn the complete phrase pattern →</a>
+      </div>
+    </div>
+  </section>
+</LearnLayout>

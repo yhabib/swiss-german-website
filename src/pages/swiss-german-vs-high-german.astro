@@ -1,0 +1,145 @@
+---
+import LearnLayout from "../layouts/LearnLayout.astro";
+
+const related = [
+  {
+    href: "/learn-swiss-german/",
+    kicker: "Learning route",
+    title: "Use German knowledge productively",
+    description: "Turn familiar Standard German prompts into consistent Zürichdeutsch recall.",
+  },
+  {
+    href: "/zurich-german/",
+    kicker: "Dialect guide",
+    title: "Meet the Zürich dialect",
+    description: "Understand the dialect name, its writing, and the variation found around Zürich.",
+  },
+  {
+    href: "/swiss-german-phrases/",
+    kicker: "Phrasebook",
+    title: "Compare 16 useful phrase pairs",
+    description: "See Zürichdeutsch beside Standard German and English in four daily situations.",
+  },
+];
+---
+
+<LearnLayout
+  title="Swiss German vs High German: Practical Differences"
+  description="Compare Swiss German and High German through practical Zürichdeutsch examples. Understand usage, pronunciation, vocabulary, grammar, and learning strategy."
+  eyebrow="Spoken dialect · Standard language"
+  heading="Swiss German and High German do different jobs."
+  intro="You do not need to choose one and reject the other. Standard German gives you a strong bridge into everyday spoken Zürichdeutsch."
+  toc={[
+    { id: "overview", label: "The short answer" },
+    { id: "use", label: "Where each form appears" },
+    { id: "examples", label: "Practical comparisons" },
+    { id: "differences", label: "What changes" },
+    { id: "strategy", label: "How to learn both" },
+  ]}
+  related={related}
+>
+  <section id="overview" class="learn-section">
+    <span class="section-number">01</span>
+    <div>
+      <p class="eyebrow">The short answer</p>
+      <h2>One is a dialect family. One is standardized.</h2>
+      <p>
+        Swiss German describes the Alemannic dialects used across German-speaking Switzerland. High German usually means Standard German in this comparison.
+      </p>
+      <p>
+        A Swiss German speaker can use dialect in conversation and Standard German in formal writing. Both forms belong in daily life.
+      </p>
+      <div class="definition-grid">
+        <article>
+          <span>Swiss German</span>
+          <h3>Regional and mainly spoken</h3>
+          <p>Forms change between Zürich, Bern, Basel, and other regions.</p>
+        </article>
+        <article>
+          <span>High German</span>
+          <h3>Standardized and widely written</h3>
+          <p>Schools, news, books, and official communication often use it.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="use" class="learn-section">
+    <span class="section-number">02</span>
+    <div>
+      <p class="eyebrow">Choose by situation</p>
+      <h2>Daily speech and formal writing often separate.</h2>
+      <div class="context-board">
+        <div>
+          <span>Often Swiss German</span>
+          <ul>
+            <li>Conversation with friends</li>
+            <li>Informal talk at work</li>
+            <li>Shops, cafés, and local services</li>
+            <li>Messages between dialect speakers</li>
+          </ul>
+        </div>
+        <div>
+          <span>Often Standard German</span>
+          <ul>
+            <li>Formal email and documents</li>
+            <li>Books and most newspapers</li>
+            <li>School writing</li>
+            <li>Official public information</li>
+          </ul>
+        </div>
+      </div>
+      <p>These are common patterns, not strict rules. Speakers adjust their language to people and situations.</p>
+    </div>
+  </section>
+
+  <section id="examples" class="learn-section">
+    <span class="section-number">03</span>
+    <div>
+      <p class="eyebrow">Standard German to Zürichdeutsch</p>
+      <h2>Compare meaning before individual words.</h2>
+      <div class="comparison-table">
+        <div class="comparison-head">
+          <span>Standard German</span><span>Zürichdeutsch</span><span>English</span>
+        </div>
+        <div><span lang="de">Guten Tag.</span><strong lang="gsw">Grüezi.</strong><span>Hello.</span></div>
+        <div><span lang="de">Ich verstehe das nicht.</span><strong lang="gsw">I verstah das nöd.</strong><span>I do not understand.</span></div>
+        <div><span lang="de">Ich hätte gern einen Kaffee.</span><strong lang="gsw">I hätt gärn en Kafi.</strong><span>I would like a coffee.</span></div>
+        <div><span lang="de">Kannst du das noch einmal sagen?</span><strong lang="gsw">Chasch das nomal säge?</strong><span>Can you say that again?</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="differences" class="learn-section">
+    <span class="section-number">04</span>
+    <div>
+      <p class="eyebrow">Several layers change</p>
+      <h2>Do not expect a simple accent change.</h2>
+      <div class="difference-grid">
+        <article><span>01</span><h3>Sound</h3><p>Familiar words can sound very different in connected speech.</p></article>
+        <article><span>02</span><h3>Vocabulary</h3><p>Some daily ideas use a different word, such as <i lang="gsw">Grüezi</i>.</p></article>
+        <article><span>03</span><h3>Grammar</h3><p>Pronouns, verb forms, word order, and endings can change.</p></article>
+        <article><span>04</span><h3>Spelling</h3><p>Swiss German writing has no single standard system.</p></article>
+      </div>
+      <div class="learn-callout">
+        <span>Safe learning rule</span>
+        <p>Learn complete phrase contrasts. Do not create Swiss German by changing a few letters.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="strategy" class="learn-section">
+    <span class="section-number">05</span>
+    <div>
+      <p class="eyebrow">Keep both forms active</p>
+      <h2>Read the standard form. Recall the dialect.</h2>
+      <ol class="learning-steps compact">
+        <li><span>01 · Understand</span><div><h3>Read the Standard German prompt.</h3><p>Confirm the meaning before dialect practice.</p></div></li>
+        <li><span>02 · Retrieve</span><div><h3>Produce the Zürichdeutsch phrase.</h3><p>Say or type it before revealing the answer.</p></div></li>
+        <li><span>03 · Compare</span><div><h3>Notice one useful contrast.</h3><p>Keep the contrast inside its complete phrase.</p></div></li>
+        <li><span>04 · Return</span><div><h3>Review it on another day.</h3><p>Make retrieval easier before adding more material.</p></div></li>
+      </ol>
+      <a class="article-link" href="/learn-swiss-german/">Build your complete learning route →</a>
+    </div>
+  </section>
+</LearnLayout>
